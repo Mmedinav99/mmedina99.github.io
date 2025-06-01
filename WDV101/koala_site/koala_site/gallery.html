@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - Koala Foundation</title>
+  <meta name="description" content="Photo gallery of koalas and conservation efforts." />
+  <!-- Author: Martin Medina -->
+  <!-- Date: 5/31/2025 -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background-color: #2a4d2e;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a8d5a3;
+    }
+
+    img.banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1, h2 {
+      color: #2a4d2e;
+      margin-bottom: 1rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      border: 2px solid #2a4d2e;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      background: #f9f9f9;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .gallery-item figcaption {
+      padding: 0.5rem 1rem;
+      font-style: italic;
+      color: #555;
+      text-align: center;
+    }
+
+    footer img {
+      width: 80px;
+      vertical-align: middle;
+      margin-left: 1rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner">
+
+  <header>
+    <h1 id="top">Gallery</h1>
+    <nav>
+      <ul>
+        <li><a href="koala_home.html">Home</a></li>
+        <li><a href="about.html">Save Koalas!</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="adopt.html">Adopt</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Koalas in Their Natural Habitat</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="images/koala_1.jpg" alt="Koala resting on a tree branch" />
+          <figcaption>Koala resting on a tree branch</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/koala_2.jpg" alt="Koala climbing a gum tree" />
+          <figcaption>Koala climbing a gum tree</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/koala_3.jpg" alt="Mother koala and joey" />
+          <figcaption>Mother koala and joey</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/koala_4.jpg" alt="Koala eating eucalyptus leaves" />
+          <figcaption>Koala eating eucalyptus leaves</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/koala_5.jpg" alt="Koala sitting peacefully" />
+          <figcaption>Koala sitting peacefully</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/koala_6.jpg" alt="Close-up of a koala's face" />
+          <figcaption>Close-up of a koala's face</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 All rights reserved. Australian Koala Foundation 
+      <img src="images/koala_logo.svg" alt="Koala Foundation Logo">
+    </p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
