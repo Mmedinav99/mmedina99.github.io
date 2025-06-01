@@ -7,10 +7,103 @@
   <meta name="description" content="Frequently asked questions about Koalas." />
   <!-- Author: Martin Medina -->
   <!-- Date: 5/31/2025 -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background-color: #2a4d2e;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a8d5a3;
+    }
+
+    img.banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1, h2 {
+      color: #2a4d2e;
+      margin-bottom: 1rem;
+    }
+
+    ul.faq-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.faq-list li {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+    }
+
+    ul.faq-list p:first-child {
+      font-weight: bold;
+      font-style: italic;
+      color: #2a4d2e;
+      margin-bottom: 0.5rem;
+    }
+
+    a.pdf-link {
+      color: #2a4d2e;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    a.pdf-link:hover {
+      color: #6ca66c;
+    }
+
+    footer img {
+      width: 80px;
+      vertical-align: middle;
+      margin-left: 1rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <img src="images/koala_banner.jpg" alt="Koala Banner" style="width:100%; height:auto;">
+  <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner">
 
   <header>
     <h1 id="top">Frequently Asked Questions</h1>
@@ -28,66 +121,66 @@
 
   <main>
     <section>
-      <ul>
+      <ul class="faq-list">
         <li>
-          <p><em>What does a Koala bear look like?</em></p>
+          <p>What does a Koala bear look like?</p>
           <p>Koalas have soft, wool-like fur that is gray above and white below...</p>
         </li>
         <li>
-          <p><em>What is the endangered status of the Koalas?</em></p>
+          <p>What is the endangered status of the Koalas?</p>
           <p>Koala bears are classified as vulnerable to be endangered.</p>
         </li>
         <li>
-          <p><em>How large can Koalas get?</em></p>
+          <p>How large can Koalas get?</p>
           <p>They weigh about 30 pounds and grow to be around 2 feet tall.</p>
         </li>
         <li>
-          <p><em>What is the population of Koalas?</em></p>
+          <p>What is the population of Koalas?</p>
           <p>There are fewer than 100,000 koalas.</p>
         </li>
         <li>
-          <p><em>What is the average lifespan of a koala?</em></p>
+          <p>What is the average lifespan of a koala?</p>
           <p>Koalas can live up to 17 years, though males often live only 2–10 years.</p>
         </li>
         <li>
-          <p><em>Where do Koalas live?</em></p>
+          <p>Where do Koalas live?</p>
           <p>Today they are found in Queensland, New South Wales, Victoria, and South Australia.</p>
         </li>
         <li>
-          <p><em>What type of environment do Koalas like?</em></p>
+          <p>What type of environment do Koalas like?</p>
           <p>Koalas prefer eucalyptus forests, coastal islands, and low woodlands.</p>
         </li>
         <li>
-          <p><em>What do Koalas eat?</em></p>
+          <p>What do Koalas eat?</p>
           <p>They eat eucalyptus leaves and bark from 12 tree species, plus mistletoe and box leaves.</p>
         </li>
         <li>
-          <p><em>How do Koalas behave?</em></p>
+          <p>How do Koalas behave?</p>
           <p>They are nocturnal and arboreal, sleeping up to 16 hours a day and living alone in trees.</p>
         </li>
         <li>
-          <p><em>How do Koalas populate?</em></p>
+          <p>How do Koalas populate?</p>
           <p>Koalas breed yearly. Babies live in the pouch 5–7 months before becoming independent.</p>
         </li>
         <li>
-          <p><em>What are some major threats to Koalas?</em></p>
+          <p>What are some major threats to Koalas?</p>
           <p>Habitat loss, traffic deaths, and dog attacks kill ~4,000 koalas annually.</p>
         </li>
         <li>
-          <p><em>How can we protect Koalas?</em></p>
+          <p>How can we protect Koalas?</p>
           <p>Australian laws protect koalas, but states manage their conservation directly.</p>
         </li>
       </ul>
       
       <p>
-        <a href="KoalasFactSheet.pdf" target="_blank" rel="noopener noreferrer">Koala Fact Sheet PDF</a>
+        <a href="KoalasFactSheet.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">Koala Fact Sheet PDF</a>
       </p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 All rights reserved. Australian Koala Foundation 
-      <img src="images/koala_logo.svg" alt="Koala Foundation Logo" style="width: 100px;">
+      <img src="images/koala_logo.svg" alt="Koala Foundation Logo">
     </p>
     <p><a href="#top">Back to top</a></p>
   </footer>
