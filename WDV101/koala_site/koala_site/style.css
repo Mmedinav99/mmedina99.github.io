@@ -1,109 +1,148 @@
-/* Grouped selector */
-h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #2a5d34;
-    margin-bottom: 10px;
+/* Reset and base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Descendant selector */
-p em {
-    font-style: italic;
-    color: #b34700;
+/* Header and Footer */
+header, footer {
+  background-color: #2a4d2e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* Independent class */
-.highlight {
-    background-color: #fffae6;
-    font-weight: bold;
-    padding: 3px 6px;
-    border-radius: 3px;
+/* Banner image full width */
+img.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
 }
 
-/* Dependent class */
-.container .highlight {
-    background-color: #d0f0c0;
-    color: #204020;
+/* Footer logo */
+footer img {
+  width: 80px;
+  vertical-align: middle;
+  margin-left: 1rem;
 }
 
-/* List styles */
-ol {
-    list-style-type: decimal-leading-zero;
-    margin-left: 30px;
-    font-family: 'Arial', sans-serif;
+/* Footer link */
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
 
-ul {
-    list-style-type: none;
-    margin-left: 20px;
-    padding-left: 0;
-    font-family: 'Arial', sans-serif;
-    list-style-position: inside;
-    list-style-image: url('images/leaf-1-24.png'); /* Make sure leaf-1-24.png is in images folder */
-}
-
-/* Hyperlink pseudo classes */
-a:link {
-    color: #0a5d0a;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #3a9a3a;
-}
-
-a:hover, a:focus {
-    color: #1aff1a;
-    text-decoration: underline;
-}
-
-/* Text and font properties */
-p, li {
-    text-transform: none;
-    text-align: justify;
-    font-weight: 400;
-    line-height: 1.6;
-}
-
-/* First-letter pseudo element */
-.first-paragraph::first-letter {
-    font-size: 200%;
-    font-weight: bold;
-    color: #2a5d34;
-    float: left;
-    margin-right: 5px;
-    line-height: 1;
-}
-
-/* Inline navigation bar */
+/* Navigation bar */
 nav {
-    background-color: #2a5d34;
-    padding: 10px 20px;
+  background-color: #2a4d2e;
+  padding: 10px 20px;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 nav ul li {
-    display: inline;
+  display: inline;
 }
 
 nav ul li a {
-    color: #e5f5e0;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 3px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    background-color: #1aff1a;
-    color: #003300;
-    outline: none;
+  color: #a8d5a3;
+  background-color: #154214;
+  outline: none;
+}
+
+/* Grouped selectors */
+h1, h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2a4d2e;
+  margin-bottom: 10px;
+}
+
+/* Descendant selector */
+p em {
+  font-style: italic;
+  color: #b34700;
+}
+
+/* Independent class */
+.highlight {
+  background-color: #fffae6;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+/* Dependent class */
+.container .highlight {
+  background-color: #d0f0c0;
+  color: #204020;
+}
+
+/* List styles */
+ol {
+  list-style-type: decimal-leading-zero;
+  margin-left: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 20px;
+  padding-left: 0;
+  font-family: 'Arial', sans-serif;
+  list-style-position: inside;
+  list-style-image: url('images/leaf-1-24.png'); /* leaf image for bullet */
+}
+
+/* Hyperlink pseudo classes */
+a:link {
+  color: #0a5d0a;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #3a9a3a;
+}
+
+a:hover, a:focus {
+  color: #1aff1a;
+  text-decoration: underline;
+}
+
+/* Text and font properties */
+p, li {
+  text-transform: none;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* First-letter pseudo element for first paragraph */
+.first-paragraph::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+  color: #2a4d2e;
+  float: left;
+  margin-right: 5px;
+  line-height: 1;
 }
