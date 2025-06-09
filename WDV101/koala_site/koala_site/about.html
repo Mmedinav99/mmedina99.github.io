@@ -2,76 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - Koala Foundation</title>
   <meta name="description" content="Information about the efforts to save Koalas and how you can help." />
   <!-- Author: Martin Medina -->
   <!-- Date: 5/31/2025 -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #333;
-    }
-    header, footer {
-      background-color: #2a4d2e;
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      padding: 2rem;
-    }
-    img.banner {
-      width: 100%;
-      height: auto;
-    }
-    section.media-section {
-      padding: 2rem;
-      background-color: #f5f5f5;
-      border-top: 2px solid #ccc;
-      margin-top: 2rem;
-    }
-    .media-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .media-content img, .media-content video {
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .media-content video {
-      max-width: 100%;
-    }
-    footer img {
-      width: 80px;
-      vertical-align: middle;
-      margin-left: 1rem;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -89,9 +25,9 @@
     </nav>
   </header>
 
-  <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner">
+  <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner" />
 
-  <main>
+  <main class="container">
     <section>
       <h2>Help Save the Koalas</h2>
       <p>There is currently no legislation, anywhere in the country, that can protect Koalas and Koala habitat in Australia. The listing of the koala as “vulnerable” under the Environmental Protection and Biodiversity Conservation Act in 2012 changed nothing.</p>
@@ -117,25 +53,25 @@
     </section>
   </main>
 
-  <section class="media-section">
-    <h2 style="text-align:center;">Meet Our Koalas!</h2>
+  <section class="media">
+    <h2>Meet Our Koalas!</h2>
     <div class="media-content">
-      <img src="images/koala_1.jpg" alt="Koala 1" width="300">
-      <img src="images/koala_2.jpg" alt="Koala 2" width="300">
+      <img src="images/koala_1.jpg" alt="Koala 1" />
+      <img src="images/koala_2.jpg" alt="Koala 2" />
     </div>
 
-    <h3 style="text-align:center;">Watch a Koala in Action!</h3>
+    <h3>Watch a Koala in Action!</h3>
     <div class="media-content">
-      <video width="500" controls>
-        <source src="images/koala_vid2.mp4" type="video/mp4">
+      <video controls>
+        <source src="images/koala_vid2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 All rights reserved. Australian Koala Foundation 
-      <img src="images/koala_logo.svg" alt="Koala Foundation Logo">
+    <p>&copy; 2025 All rights reserved. Australian Koala Foundation
+      <img src="images/koala_logo.svg" alt="Koala Foundation Logo" />
     </p>
     <p><a href="#top">Back to top</a></p>
   </footer>
