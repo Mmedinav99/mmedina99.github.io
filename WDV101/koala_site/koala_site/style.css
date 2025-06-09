@@ -15,12 +15,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Make all images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Container */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 0 2rem 0;
+}
+
+/* Center and limit width of all paragraphs inside container for readability */
+.container p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Header and Footer */
