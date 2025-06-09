@@ -146,3 +146,32 @@ p, li {
   margin-right: 5px;
   line-height: 1;
 }
+
+/* --- New styles for Contact page media section --- */
+
+/* Media section background and spacing */
+section.media {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Container for images and video, flex with wrap and spacing */
+.media-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Style images and videos inside media content */
+.media-content img,
+.media-content video {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
