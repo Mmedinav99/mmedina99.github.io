@@ -247,3 +247,56 @@ a:focus {
     gap: 1rem;
   }
 }
+
+/* --- Gallery Styles --- */
+
+/* Gallery grid container */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+/* Each gallery item */
+.gallery-item {
+  text-align: center;
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+/* Images inside gallery */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Caption text */
+.gallery-item figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2a4d2e;
+}
+
+/* Responsive text size for first paragraph */
+.first-paragraph {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.5;
+  color: #444;
+}
