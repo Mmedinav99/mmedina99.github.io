@@ -11,10 +11,10 @@
 }
 
 body {
-  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  font-family: 'Merriweather', Georgia, serif; 
   margin: 0;
-  background-color: hsl(135, 50%, 95%);
-  color: hsl(0, 0%, 20%);
+  background-color: hsl(135, 50%, 95%); 
+  color: #333;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,10 +44,6 @@ img {
   margin-right: auto;
   margin-bottom: 1.25rem;
   text-align: justify;
-  text-indent: 1.5rem;
-  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
-  font-size: 1.1rem;
-  color: hsl(0, 0%, 20%);
 }
 
 /* ===========================
@@ -64,10 +60,8 @@ header {
 header h1 {
   margin: 0 0 0.5rem;
   font-size: 2.8rem;
-  letter-spacing: 0.05em;
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-family: 'Montserrat', sans-serif; 
   background-color: #111;
   color: #fefefe;
   padding: 0.5rem;
@@ -98,7 +92,6 @@ nav ul li a {
   padding: 0.6rem 1rem;
   border-radius: 5px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav ul li a:hover,
@@ -125,32 +118,27 @@ img.banner {
    Headings
 =========================== */
 h1, h2, h3 {
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif; 
   color: #2a4d2e;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 2.8rem;
 }
 
 h2 {
-  font-weight: 600;
-  font-size: 2rem;
   color: rgb(42, 100, 42);
 }
 
 h3 {
-  font-weight: 500;
-  font-size: 1.5rem;
   color: #3a5a2a;
 }
 
 /* ===========================
    Paragraphs
 =========================== */
+p {
+  font-family: 'Merriweather', Georgia, serif; 
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 20%);
+}
+
 p em {
   font-style: italic;
   color: #b34700;
@@ -167,17 +155,16 @@ p em {
 }
 
 /* ===========================
-   Media Section (Images & Videos)
+   Media Section
 =========================== */
 .media-content img,
 .media-content video {
-  max-width: 600px;
+  max-width: 450px;
   width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  margin: 0.75rem 1rem 1.5rem 0;
 }
 
 /* ===========================
@@ -186,32 +173,30 @@ p em {
 footer {
   background-color: #2a4d2e;
   color: white;
+  padding: 1rem;
   text-align: center;
-  padding: 1rem 0;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-}
-
-footer p {
-  margin: 0.25rem 0;
-  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
   font-size: 0.9rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 }
 
 footer img {
   vertical-align: middle;
-  height: 32px;
-  width: auto;
-  margin-left: 0.5rem;
+  max-height: 30px;
+  margin-left: 8px;
 }
 
-footer a {
-  color: #a8d5a3;
-  text-decoration: none;
-  font-weight: 600;
+/* ===========================
+   FAQ Page Columns
+=========================== */
+main.faq-columns {
+  columns: 3;
+  column-gap: 2rem;
+  column-rule: 1px solid #ccc;
+  padding: 1rem;
 }
 
-footer a:hover,
-footer a:focus {
-  text-decoration: underline;
-  color: #d6f0d6;
+main.faq-columns > h2 {
+  column-span: all;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
