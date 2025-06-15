@@ -8,12 +8,9 @@
   <!-- Author: Martin Medina -->
   <!-- Date: 5/31/2025 -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Merriweather&display=swap" rel="stylesheet" />
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner" />
 
   <header>
     <h1 id="top">Koala Bear National Information Center</h1>
@@ -28,16 +25,12 @@
     </nav>
   </header>
 
-  <main>
-    
-    <section class="clearfix">
-     
-      <img src="images/koala_home_left.jpg" alt="Koala on a tree" class="float-left" />
+  <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner" />
 
-      
-      <img src="images/koala_home_right.jpg" alt="Koala looking at camera" class="float-right" />
-
-      <p class="first-paragraph">Welcome to the Koala Bear National Information Center! In this site you can learn about Koala bears, adopt a Koala, give to our foundation, sign up for our newsletter, or schedule a visit. Please take some time to explore the information provided in this site!</p>
+  <main class="container">
+    <section>
+      <h2>Welcome to the Koala Bear National Information Center!</h2>
+      <p class="first-paragraph">In this site you can learn about Koala bears, adopt a Koala, give to our foundation, sign up for our newsletter, or schedule a visit. Please take some time to explore the information provided in this site!</p>
 
       <p>The Koala Bear National Information Center (KBNIC) is the principal non-profit, non-government organization dedicated to the conservation and effective management of the wild koala and its habitat.</p>
 
@@ -47,9 +40,17 @@
     </section>
   </main>
 
+  <section class="media">
+    <h2>Our Koalas</h2>
+    <div class="media-content">
+      <img src="images/koala_home_left.jpg" alt="Koala in Tree" class="float-left" />
+      <img src="images/koala_home_right.jpg" alt="Koala Looking Around" class="float-right" />
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 All rights reserved. Australian Koala Foundation 
-      <img src="images/koala_logo.svg" alt="Koala Foundation Logo" />
+    <p>&copy; 2025 All rights reserved. Australian Koala Foundation
+      <img src="images/koala_logo.svg" alt="Koala Foundation Logo" class="footer-logo" />
     </p>
     <p><a href="#top">Back to top</a></p>
   </footer>
