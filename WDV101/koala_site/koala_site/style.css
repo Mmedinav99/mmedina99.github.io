@@ -1,5 +1,7 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Merriweather&display=swap');
+/* ===========================
+   Google Font Import
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap');
 
 /* ===========================
    Reset & Base Styles
@@ -11,9 +13,9 @@
 }
 
 body {
-  font-family: 'Merriweather', Georgia, serif; 
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
-  background-color: hsl(135, 50%, 95%); 
+  background-color: hsl(135, 50%, 95%);
   color: #333;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -22,28 +24,110 @@ body {
   scroll-behavior: smooth;
 }
 
+/* ===========================
+   Images & Media
+=========================== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 1rem auto;
+  border: 4px solid #2a4d2e;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+img.banner {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0 2rem;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+video {
+  width: 100%;
+  max-width: 640px;
+  margin: 1rem auto;
+  display: block;
+  border: 4px solid #2a4d2e;
+  border-radius: 10px;
+}
+
+/* Float Classes */
+.float-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.float-left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* ===========================
-   Container Layout
+   Typography & Headings
 =========================== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 0 2rem;
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  color: #fefefe;
+  background-color: #111;
+  padding: 0.5rem;
+  margin: 0 0 0.5rem;
+  border-radius: 6px;
 }
 
-.container p {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  color: #2a4d2e;
+}
+
+h2 {
+  font-size: 2rem;
+  color: rgb(42, 100, 42);
+}
+
+h3, h4 {
+  font-size: 1.4rem;
+  background-color: #eef6ee;
+  padding: 0.75rem;
+  border-top: 3px solid #2a4d2e;
+  margin: 1.5rem 0 1rem;
+}
+
+/* ===========================
+   Text Elements
+=========================== */
+p {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 20%);
   margin-bottom: 1.25rem;
   text-align: justify;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+p em {
+  font-style: italic;
+  color: #b34700;
+}
+
+.first-paragraph::first-letter {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #2a4d2e;
+  float: left;
+  margin: 0 12px 0 0;
+  line-height: 1;
+  font-family: 'Georgia', serif;
 }
 
 /* ===========================
@@ -55,17 +139,6 @@ header {
   padding: 1rem 0 0.5rem;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-header h1 {
-  margin: 0 0 0.5rem;
-  font-size: 2.8rem;
-  letter-spacing: 0.03em;
-  font-family: 'Montserrat', sans-serif; 
-  background-color: #111;
-  color: #fefefe;
-  padding: 0.5rem;
-  border-radius: 6px;
 }
 
 nav {
@@ -102,69 +175,50 @@ nav ul li a:focus {
 }
 
 /* ===========================
-   Banner Image
+   Container Layout
 =========================== */
-img.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem 0 2rem;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.container p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===========================
-   Headings
+   FAQ Column Styling
 =========================== */
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif; 
-  color: #2a4d2e;
+.columns {
+  column-count: 3;
+  column-gap: 2rem;
+  column-rule: 2px solid #ccc;
 }
 
-h2 {
-  color: rgb(42, 100, 42);
-}
-
-h3 {
-  color: #3a5a2a;
-}
-
-/* ===========================
-   Paragraphs
-=========================== */
-p {
-  font-family: 'Merriweather', Georgia, serif; 
-  font-size: 1.1rem;
-  color: hsl(0, 0%, 20%);
-}
-
-p em {
-  font-style: italic;
-  color: #b34700;
-}
-
-.first-paragraph::first-letter {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #2a4d2e;
-  float: left;
-  margin: 0 12px 0 0;
-  line-height: 1;
-  font-family: 'Georgia', serif;
+.columns h2 {
+  column-span: all;
+  text-align: center;
 }
 
 /* ===========================
    Media Section
 =========================== */
-.media-content img,
-.media-content video {
-  max-width: 450px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  margin: 0.75rem 1rem 1.5rem 0;
+.media {
+  padding: 2rem;
+  background-color: #eef6ee;
+  text-align: center;
+}
+
+.media-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1rem 0;
 }
 
 /* ===========================
@@ -175,28 +229,17 @@ footer {
   color: white;
   padding: 1rem;
   text-align: center;
-  font-size: 0.9rem;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  margin-top: 2rem;
 }
 
 footer img {
+  width: 50px;
+  height: auto;
   vertical-align: middle;
-  max-height: 30px;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
-/* ===========================
-   FAQ Page Columns
-=========================== */
-main.faq-columns {
-  columns: 3;
-  column-gap: 2rem;
-  column-rule: 1px solid #ccc;
-  padding: 1rem;
-}
-
-main.faq-columns > h2 {
-  column-span: all;
-  margin-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+footer a {
+  color: #a8d5a3;
+  text-decoration: none;
 }
