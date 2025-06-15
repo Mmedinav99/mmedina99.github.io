@@ -10,7 +10,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: hsl(135, 50%, 95%); /* Soft light green - HSL */
+  background-color: hsl(135, 50%, 95%); 
   color: #333;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -48,7 +48,7 @@ img {
 =========================== */
 header {
   background-color: #2a4d2e;
-  color: white; /* Named color */
+  color: white; 
   padding: 1rem 0 0.5rem;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -59,8 +59,8 @@ header h1 {
   font-size: 2.8rem;
   letter-spacing: 0.03em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #111; /* Dark background */
-  color: #fefefe; /* Light text - hex */
+  background-color: #111; 
+  color: #fefefe; 
   padding: 0.5rem;
   border-radius: 6px;
 }
@@ -93,22 +93,29 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: rgb(21, 66, 20); /* RGB color */
+  background-color: rgb(21, 66, 20); 
   color: #a8d5a3;
   box-shadow: inset 0 -3px 0 #a8d5a3;
+  outline: none;
+}
+
+/* Add focus outline for accessibility */
+nav ul li a:focus-visible {
+  outline: 3px solid #a8d5a3;
+  outline-offset: 3px;
 }
 
 /* ===========================
    Banner Image
 =========================== */
 img.banner {
+  max-height: 250px;   
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   display: block;
   margin: 1rem 0 2rem;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 /* ===========================
@@ -120,11 +127,15 @@ h1, h2, h3 {
 }
 
 h2 {
-  color: rgb(42, 100, 42); /* RGB format */
+  color: rgb(42, 100, 42); 
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   color: #3a5a2a; /* Hex */
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* ===========================
@@ -150,4 +161,103 @@ p em {
   font-family: 'Georgia', serif;
 }
 
-/* Remaining sections unchanged unless color updates were needed */
+/* ===========================
+   Media Section (Images and Videos)
+=========================== */
+.media-content img {
+  max-width: 300px;    
+  width: 100%;
+  height: auto;
+  margin: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.media-content video {
+  max-width: 400px;   
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  display: block;
+  margin: 1rem auto;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #2a4d2e;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #a8d5a3;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
+
+footer img.footer-logo {
+  width: 120px;    
+  height: auto;
+  vertical-align: middle;
+}
+
+/* ===========================
+   Lists
+=========================== */
+ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: #2a4d2e;
+}
+
+/* ===========================
+   Misc
+=========================== */
+a {
+  color: #2a4d2e;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #3a5a2a;
+  outline: none;
+}
+
+/* ===========================
+   Responsive Adjustments 
+=========================== */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .media-content img,
+  .media-content video {
+    max-width: 100%;
+  }
+
+  img.banner {
+    max-height: 180px;
+  }
+
+  footer img.footer-logo {
+    width: 100px;
+  }
+}
