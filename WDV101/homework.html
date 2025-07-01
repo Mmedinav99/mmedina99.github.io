@@ -4,69 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WDV101 Homework Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
   <style>
-    body {
+    /* Base Reset */
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
-      padding-top: 60px; /* Space for the HUD */
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: 'IM Fell English SC', serif;
+      background-color: #2d1f14;
+      color: #e0c097;
+      padding-top: 70px; 
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      background-attachment: fixed;
+    }
+
+    /* HUD Navigation Bar */
     .hud {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
+      background: linear-gradient(145deg, #4a2e18, #2c1b10);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      border-bottom: 2px solid #00ff99;
+      padding: 14px 30px;
       z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      border-bottom: 2px solid #c27c0e;
     }
 
     .hud h2 {
       margin: 0;
       font-size: 1.2rem;
-      color: #00ff99;
+      color: #e8c17b;
     }
 
     .hud nav a {
-      color: #00ff99;
+      color: #f4d58d;
       text-decoration: none;
       font-weight: bold;
-      margin-left: 20px;
-      transition: color 0.3s ease;
+      margin-left: 24px;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     .hud nav a:hover {
-      color: #ffffff;
-      text-decoration: underline;
+      color: #ffae42;
+      text-shadow: 0 0 6px #ffae42;
     }
 
+    /* Main Content */
     .content {
-      padding: 20px;
+      padding: 30px;
+      background-color: rgba(51, 35, 21, 0.9);
+      border: 2px solid #a56c1c;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      transition: box-shadow 0.3s ease;
     }
 
-    a {
-      color: #00ffff;
-      text-decoration: none;
-      transition: color 0.3s ease;
+    .content:hover {
+      box-shadow: 0 0 20px rgba(204, 119, 34, 0.5);
     }
 
-    a:hover {
-      color: #ffffff;
-      text-decoration: underline;
+    h1 {
+      font-size: 2.5rem;
+      color: #ffcc88;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     ul {
       list-style-type: square;
-      padding-left: 20px;
+      padding-left: 25px;
+      margin-bottom: 20px;
     }
 
     ul li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #ffcc88;
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffd98a;
+      text-shadow: 0 0 6px #ffb84d;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .content {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -86,14 +137,13 @@
 
     <ul>
       <li><a href="koala_site/koala_site/koala_home.html">Project 1: Koala Website</a></li>
-      <li><a href="project2.html">Project 2:</a></li>
-      <li><a href="project3.html">Project 3:</a></li>
-      <li><a href="project4.html">Project 4:</a></li>
-      <li><a href="project5.html">Project 5:</a></li>
+      <li><a href="project2.html">Project 2: TBD</a></li>
+      <li><a href="project3.html">Project 3: TBD</a></li>
+      <li><a href="project4.html">Project 4: TBD</a></li>
+      <li><a href="project5.html">Project 5: TBD</a></li>
     </ul>
 
-    
-    <p><a href="../index.html">Back to Home Page</a></p>
+    <p><a href="../index.html">🔙 Back to Home Page</a></p>
   </div>
 </body>
 </html>
