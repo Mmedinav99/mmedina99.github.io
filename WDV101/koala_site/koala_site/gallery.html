@@ -12,49 +12,53 @@
 </head>
 <body>
 
-  <header>
-    <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner" />
-    <h1 id="top">Gallery</h1>
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="koala_home.html">Home</a></li>
-        <li><a href="about.html">Save Koalas!</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
-        <li><a href="adopt.html">Adopt</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
 
-  <main>
-    <section>
-      <h2>Koalas in Their Natural Habitat</h2>
-      <p class="first-paragraph">
-        Explore our beautiful gallery showcasing koalas in their natural environment. 
-        Each image highlights the beauty and importance of conservation efforts.
+    <header>
+      <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner" />
+      <h1 id="top">Gallery</h1>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="koala_home.html">Home</a></li>
+          <li><a href="about.html">Save Koalas!</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="adopt.html">Adopt</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Koalas in Their Natural Habitat</h2>
+        <p class="first-paragraph">
+          Explore our beautiful gallery showcasing koalas in their natural environment. 
+          Each image highlights the beauty and importance of conservation efforts.
+        </p>
+
+        <div class="gallery-grid" role="list">
+          <figure class="gallery-item" role="listitem">
+            <img src="images/koala_1.jpg" alt="Koala resting on a tree branch" loading="lazy" />
+            <figcaption>Koala on a tree</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <img src="images/koala_2.jpg" alt="Koala climbing a gum tree" loading="lazy" />
+            <figcaption>Koala climbing a tree</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 All rights reserved. Australian Koala Foundation
+        <img src="images/koala_logo.svg" alt="Koala Foundation Logo" />
       </p>
+      <p><a href="#top">Back to top</a></p>
+    </footer>
 
-      <div class="gallery-grid" role="list">
-        <figure class="gallery-item" role="listitem">
-          <img src="images/koala_1.jpg" alt="Koala resting on a tree branch" loading="lazy" />
-          <figcaption>Koala on a tree</figcaption>
-        </figure>
-        <figure class="gallery-item" role="listitem">
-          <img src="images/koala_2.jpg" alt="Koala climbing a gum tree" loading="lazy" />
-          <figcaption>Koala climbing a tree</figcaption>
-        </figure>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>
-      &copy; 2025 All rights reserved. Australian Koala Foundation
-      <img src="images/koala_logo.svg" alt="Koala Foundation Logo" />
-    </p>
-    <p><a href="#top">Back to top</a></p>
-  </footer>
+  </div>
 
 </body>
 </html>
