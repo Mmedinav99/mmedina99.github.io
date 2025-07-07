@@ -55,25 +55,6 @@ video {
   border-radius: 10px;
 }
 
-/* Float Classes */
-.float-right {
-  float: right;
-  margin: 0 0 1rem 1.5rem;
-  max-width: 300px;
-}
-
-.float-left {
-  float: left;
-  margin: 0 1.5rem 1rem 0;
-  max-width: 300px;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* ===========================
    Typography & Headings
 =========================== */
@@ -95,6 +76,7 @@ h2, h3, h4 {
 h2 {
   font-size: 2rem;
   color: rgb(42, 100, 42);
+  margin-top: 0;
 }
 
 h3, h4 {
@@ -122,77 +104,6 @@ p em {
   color: #b34700;
 }
 
-.first-paragraph::first-letter {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #2a4d2e;
-  float: left;
-  margin: 0 12px 0 0;
-  line-height: 1;
-  font-family: 'Georgia', serif;
-}
-
-/* PDF link style */
-a.pdf-link {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #2a4d2e;
-  background-color: #d5f3da;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  border: 1px solid #2a4d2e;
-}
-
-a.pdf-link:hover {
-  background-color: #c2e7cb;
-}
-
-/* ===========================
-   Header & Navigation
-=========================== */
-header {
-  background-color: #2a4d2e;
-  color: white;
-  padding: 1rem 0 0.5rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-nav {
-  background-color: #2a4d2e;
-  padding: 0.75rem 1.5rem;
-  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1);
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.6rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-  background-color: rgb(21, 66, 20);
-  color: #a8d5a3;
-  box-shadow: inset 0 -3px 0 #a8d5a3;
-}
-
 /* ===========================
    Container Layout
 =========================== */
@@ -210,72 +121,23 @@ nav ul li a:focus {
 }
 
 /* ===========================
-   Gallery Grid
+   3-Column Flexbox Layout
 =========================== */
-.gallery-grid {
+.columns-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  padding: 1rem 0;
 }
 
-.gallery-item {
-  flex: 1 1 300px;
-  max-width: 400px;
-}
-
-/* ===========================
-   FAQ Column Styling
-=========================== */
-.columns {
-  column-count: 3;
-  column-gap: 2rem;
-  column-rule: 2px solid #ccc;
-}
-
-.columns h2 {
-  column-span: all;
-  text-align: center;
-}
-
-/* FAQ List Format */
-.faq-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.faq-list li {
-  margin-bottom: 1.25rem;
-}
-
-.faq-list p {
-  margin: 0;
-  padding: 0 0.5rem;
-}
-
-.faq-heading {
-  font-size: 1.6rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #1c4020;
-}
-
-/* ===========================
-   Media Section
-=========================== */
-.media {
-  padding: 2rem;
+.column {
+  flex: 1;
   background-color: #eef6ee;
-  text-align: center;
-}
-
-.media-content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 1rem 0;
+  padding: 1rem;
+  border: 2px solid #2a4d2e;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(42, 77, 46, 0.3);
+  min-width: 200px;
 }
 
 /* ===========================
@@ -305,36 +167,23 @@ footer a {
    Responsive Media Queries
 =========================== */
 @media (max-width: 768px) {
-  
+  /* Stack columns vertically on small screens */
+  .columns-container {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  /* Smaller font size in columns on small screens (layout change) */
+  .column {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Adjust container width & background */
   .container {
     width: 100%;
     margin: 0;
     padding: 1rem;
     background-color: hsl(135, 40%, 90%);
-  }
-
-  /* Remove floats and center images on smaller screens */
-  .float-left,
-  .float-right {
-    float: none;
-    display: block;
-    margin: 1rem auto;
-    max-width: 90%;
-  }
-
-  /* Adjust paragraph padding on small screens */
-  p {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .gallery-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery-item {
-    max-width: 90%;
-    flex: none;
   }
 }
