@@ -9,6 +9,30 @@
   <!-- Date: 6/20/2025 -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Responsive styles integrated here for demo */
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        background-color: hsl(135, 40%, 90%);
+      }
+      /* Remove floats and center images on smaller screens */
+      .float-left,
+      .float-right {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+        max-width: 90%;
+      }
+      /* Adjust paragraph padding on small screens */
+      p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -50,7 +74,7 @@
         <h3>Why Koalas Matter</h3>
         <p>
           Koalas are disappearing. Please help koalas by supporting the
-          <a href="https://www.savethekoala.com" target="_blank">Australian Koala Foundation</a>.
+          <a href="https://www.savethekoala.com" target="_blank" rel="noopener noreferrer">Australian Koala Foundation</a>.
         </p>
       </section>
     </main>
