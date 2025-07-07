@@ -203,7 +203,6 @@ nav ul li a:focus {
   padding: 1rem 0 2rem;
 }
 
-
 .container p {
   max-width: 700px;
   margin-left: auto;
@@ -314,13 +313,26 @@ footer a {
     background-color: hsl(135, 40%, 90%);
   }
 
-  
+  /* Remove floats and center images on smaller screens */
+  .float-left,
+  .float-right {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    max-width: 90%;
+  }
+
+  /* Adjust paragraph padding on small screens */
+  p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .gallery-grid {
     flex-direction: column;
     align-items: center;
   }
 
-  
   .gallery-item {
     max-width: 90%;
     flex: none;
