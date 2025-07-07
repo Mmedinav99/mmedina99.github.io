@@ -12,52 +12,66 @@
 </head>
 <body>
 
-  <img src="images/koala_banner.jpg" alt="Koala Banner" class="banner">
+  <div class="container">
 
-  <header>
-    <h1>Adopt a Koala</h1>
-    <nav>
-      <ul>
-        <li><a href="koala_home.html">Home</a></li>
-        <li><a href="about.html">Save Koalas!</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="adopt.html">Adopt</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <h1 id="top">Adopt a Koala</h1>
+      <nav>
+        <ul>
+          <li><a href="koala_home.html">Home</a></li>
+          <li><a href="about.html">Save Koalas!</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="adopt.html" aria-current="page">Adopt</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main class="container">
-    <section>
-      <h2>Make a Difference — Adopt a Koala Today!</h2>
-      <p>By adopting a koala, you’re directly supporting habitat conservation, rescue efforts, and research to help ensure their survival.</p>
-      <p>Your symbolic adoption helps fund protection programs, medical care, and environmental advocacy.</p>
+    <img src="images/koala_banner.jpg" alt="Koala Foundation Banner with koala in eucalyptus tree" class="banner" />
+
+    <main>
+      <section>
+        <h2>Make a Difference — Adopt a Koala Today!</h2>
+        <p>By adopting a koala, you’re directly supporting habitat conservation, rescue efforts, and research to help ensure their survival.</p>
+        <p>Your symbolic adoption helps fund protection programs, medical care, and environmental advocacy.</p>
+
+        <p><strong>Each adoption includes:</strong></p>
+        <ul>
+          <li>Adoption certificate</li>
+          <li>Full-color koala photo</li>
+          <li>Koala profile and habitat map</li>
+          <li>Updates on your adopted koala</li>
+        </ul>
+
+        <p><a href="adoption_form.pdf" target="_blank" class="pdf-link">Download Adoption Form (PDF)</a></p>
+      </section>
+    </main>
+
+    <section class="media">
+      <h2>Meet Our Koalas!</h2>
+      <div class="media-content">
+        <img src="images/koala_1.jpg" alt="Koala in eucalyptus tree" />
+        <img src="images/koala_2.jpg" alt="Koala looking at camera" />
+      </div>
+
+      <h3>Watch a Koala in Action!</h3>
+      <div class="media-content">
+        <video width="300" controls>
+          <source src="images/koala_vid2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </section>
-  </main>
 
-  <section class="media">
-    <h2>Meet Our Koalas!</h2>
-    <div class="media-content">
-      <img src="images/koala_1.jpg" alt="Koala 1">
-      <img src="images/koala_2.jpg" alt="Koala 2">
-    </div>
+    <footer>
+      <p>&copy; 2025 All rights reserved. Australian Koala Foundation
+        <img src="images/koala_logo.svg" alt="Koala Foundation Logo" />
+      </p>
+      <p><a href="#top">Back to top</a></p>
+    </footer>
 
-    <h3>Watch a Koala in Action!</h3>
-    <div class="media-content">
-      <video width="300" controls>
-        <source src="images/koala_vid2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 All rights reserved. Australian Koala Foundation 
-      <img src="images/koala_logo.svg" alt="Koala Foundation Logo" />
-    </p>
-    <p><a href="#top">Back to top</a></p>
-  </footer>
+  </div>
 
 </body>
 </html>
