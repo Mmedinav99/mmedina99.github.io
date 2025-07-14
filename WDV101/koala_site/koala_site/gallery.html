@@ -1,81 +1,195 @@
- <!-- Author: Martin Medina -->
-  <!-- Date: 6/20/2025 -->
-<main>
-  <div class="gallery-grid">
-    <!-- Repeatable gallery figure blocks -->
-    <figure class="gallery-item">
-      <a href="#lightbox-ella"><img src="images/ella.jpg" alt="ella" /></a>
-      <figcaption>ella.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-grant"><img src="images/grant.jpg" alt="grant" /></a>
-      <figcaption>grant.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-jams"><img src="images/jams.jpg" alt="jams" /></a>
-      <figcaption>jams.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-jilley"><img src="images/jilley_and_baby.jpg" alt="jilley and baby" /></a>
-      <figcaption>jilley_and_baby.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-koala"><img src="images/koala_c.jpg" alt="koala c" /></a>
-      <figcaption>koala_c.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-lucy"><img src="images/lucy.jpg" alt="lucy" /></a>
-      <figcaption>lucy.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-miffy"><img src="images/miffy.jpg" alt="miffy" /></a>
-      <figcaption>miffy.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-riley"><img src="images/riley.jpg" alt="riley" /></a>
-      <figcaption>riley.jpg</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <a href="#lightbox-nooka"><img src="images/nooka_and_baby.jpg" alt="nooka and baby" /></a>
-      <figcaption>nooka_and_baby.jpg</figcaption>
-    </figure>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - Koala Foundation</title>
+  <!-- Author: Martin Medina -->
+  <!-- Date: 7/14/2025 -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Merriweather&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(33.333% - 2rem);
+      max-width: 300px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-item {
+        flex: 1 1 calc(50% - 2rem);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery-item {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/koala_banner.jpg" alt="Koala Banner" class="banner" />
+      <h1 id="top">Gallery</h1>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="koala_home.html">Home</a></li>
+          <li><a href="about.html">Save Koalas!</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="adopt.html">Adopt</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="gallery-grid">
+        <!-- Repeatable gallery figure blocks -->
+        <figure class="gallery-item">
+          <a href="#lightbox-ella"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/ella.jpg" alt="ella" /></a>
+          <figcaption>ella.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-grant"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/grant.jpg" alt="grant" /></a>
+          <figcaption>grant.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-jams"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/jams.jpg" alt="jams" /></a>
+          <figcaption>jams.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-jilley"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/jilley_and_baby.jpg" alt="jilley and baby" /></a>
+          <figcaption>jilley_and_baby.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-koala"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/koala_c.jpg" alt="koala c" /></a>
+          <figcaption>koala_c.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-lucy"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/lucy.jpg" alt="lucy" /></a>
+          <figcaption>lucy.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-miffy"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/miffy.jpg" alt="miffy" /></a>
+          <figcaption>miffy.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-riley"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/riley.jpg" alt="riley" /></a>
+          <figcaption>riley.jpg</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="#lightbox-nooka"><img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/nooka_and_baby.jpg" alt="nooka and baby" /></a>
+          <figcaption>nooka_and_baby.jpg</figcaption>
+        </figure>
+      </div>
+
+      <!-- Lightbox sections -->
+      <div id="lightbox-ella" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/ella.jpg" alt="ella" />
+      </div>
+      <div id="lightbox-grant" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/grant.jpg" alt="grant" />
+      </div>
+      <div id="lightbox-jams" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/jams.jpg" alt="jams" />
+      </div>
+      <div id="lightbox-jilley" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/jilley_and_baby.jpg" alt="jilley and baby" />
+      </div>
+      <div id="lightbox-koala" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/koala_c.jpg" alt="koala c" />
+      </div>
+      <div id="lightbox-lucy" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/lucy.jpg" alt="lucy" />
+      </div>
+      <div id="lightbox-miffy" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/miffy.jpg" alt="miffy" />
+      </div>
+      <div id="lightbox-riley" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/riley.jpg" alt="riley" />
+      </div>
+      <div id="lightbox-nooka" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/nooka_and_baby.jpg" alt="nooka and baby" />
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 All rights reserved. Australian Koala Foundation
+        <img src="https://mmedina99.github.io/WDV101/koala_site/koala_site/images/koala_logo.svg" alt="Koala Foundation Logo" />
+      </p>
+      <p><a href="#top">Back to top</a></p>
+    </footer>
+
   </div>
 
-  <!-- Lightbox sections -->
-  <div id="lightbox-ella" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/ella.jpg" alt="ella" />
-  </div>
-  <div id="lightbox-grant" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/grant.jpg" alt="grant" />
-  </div>
-  <div id="lightbox-jams" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/jams.jpg" alt="jams" />
-  </div>
-  <div id="lightbox-jilley" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/jilley_and_baby.jpg" alt="jilley and baby" />
-  </div>
-  <div id="lightbox-koala" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/koala_c.jpg" alt="koala c" />
-  </div>
-  <div id="lightbox-lucy" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/lucy.jpg" alt="lucy" />
-  </div>
-  <div id="lightbox-miffy" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/miffy.jpg" alt="miffy" />
-  </div>
-  <div id="lightbox-riley" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/riley.jpg" alt="riley" />
-  </div>
-  <div id="lightbox-nooka" class="lightbox">
-    <a href="#" class="lightbox-close">&times;</a>
-    <img src="images/nooka_and_baby.jpg" alt="nooka and baby" />
-  </div>
-</main>
+</body>
+</html>
