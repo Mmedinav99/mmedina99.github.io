@@ -291,3 +291,68 @@ footer a {
   transform: scale(1.02);
   transition: transform 0.3s ease;
 }
+/* ===========================
+   Navigation Menu Styling
+=========================== */
+nav {
+  background-color: #d4f5d4;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #2a4d2e;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background-color: #e9ffe9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #2a4d2e;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+nav a[aria-current="page"] {
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 0 0 2px #cdeac0 inset;
+}
+
+/* ===========================
+   Small Screen Adjustments
+=========================== */
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
