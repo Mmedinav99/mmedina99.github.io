@@ -7,7 +7,7 @@
   <meta name="description" content="Get in touch with the Australian Koala Foundation." />
   <!-- Author: Martin Medina -->
   <!-- Date: 5/31/2025 -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Merriweather&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -38,6 +38,38 @@
         <p><strong>Email:</strong> <a href="mailto:info@savethekoala.org">info@savethekoala.org</a></p>
         <p><strong>Phone:</strong> +61 7 3229 7233</p>
         <p><strong>Address:</strong> Australian Koala Foundation, GPO Box 2659, Brisbane QLD 4001, Australia</p>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="post">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="name@anywhere.com" required />
+
+          <label for="topic">Topic:</label>
+          <select id="topic" name="topic" required>
+            <option value="">-- Select a Topic --</option>
+            <option value="adoption">Koala Adoption</option>
+            <option value="volunteer">Volunteering</option>
+            <option value="donation">Donations</option>
+            <option value="general">General Inquiry</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+          <div class="form-buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
       </section>
     </main>
 
