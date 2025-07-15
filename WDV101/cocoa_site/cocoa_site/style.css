@@ -1,132 +1,194 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
+/* =============================
+   Google Font Import
+============================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
 
-/* Reset & base styles */
+/* =============================
+   Reset & Base Styles
+============================= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #f9f7f6;
-  color: #222;
-  font-family: 'Open Sans', Arial, sans-serif;
-  line-height: 1.6;
+  background-color: #f3efe9; /* Light cocoa cream */
+  color: #3e2f2f;            /* Deep cocoa brown */
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  padding-bottom: 50px;
 }
 
 h1, h2, h3 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Playfair Display', serif;
+  color: #4e342e; /* Cocoa-rich brown */
 }
 
 h2, h3 {
-  margin: 20px 0 10px;
+  margin: 24px 0 12px;
   padding-top: 10px;
-  border-top: 3px solid #6b4f4f;
+  border-top: 3px solid #a97455; /* Cocoa accent */
 }
 
+/* =============================
+   Container
+============================= */
 .container {
-  width: 100%;
   max-width: 1100px;
   min-width: 960px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 20px 30px;
+  background-color: #fffaf5; /* Soft cocoa paper */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(120, 72, 50, 0.2);
 }
 
+/* =============================
+   Navigation
+============================= */
 nav {
-  background-color: #6b4f4f;
-  padding: 12px 20px;
-  margin-bottom: 30px;
+  background-color: #6d4c41; /* Dark cocoa */
+  padding: 15px 20px;
   border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
 }
 
 nav a {
-  color: #f9f7f6;
+  color: #fcebd5;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 nav a:hover,
 nav a:focus {
-  color: #d9b382;
+  color: #ffcc80; /* Warm caramel */
   outline: none;
 }
 
-/* Images */
+/* =============================
+   Typography
+============================= */
+p {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+strong {
+  color: #5d4037;
+}
+
+em {
+  font-style: italic;
+  color: #6e4b3c;
+}
+
+/* =============================
+   Images
+============================= */
 img {
   max-width: 100%;
   height: auto;
-  margin: 15px 0;
-  border: 3px solid #6b4f4f;
-  border-radius: 6px;
+  border: 4px solid #d7ccc8;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
 }
 
-/* Float classes */
+/* Float Image Classes */
 .float-left {
   float: left;
   margin-right: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width: 40%;
-  max-width: 250px;
-  border-color: #a67c7c;
+  max-width: 300px;
 }
 
 .float-right {
   float: right;
   margin-left: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width: 40%;
-  max-width: 250px;
-  border-color: #a67c7c;
+  max-width: 300px;
 }
 
-/* Clear floats after sections */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Paragraph padding */
-p {
-  padding-bottom: 15px;
+/* =============================
+   Links
+============================= */
+a {
+  color: #8d6e63;
 }
 
-/* Link styles */
 a.external-link {
-  color: #6b4f4f;
-  font-weight: bold;
   text-decoration: underline;
+  color: #795548;
+  font-weight: 600;
 }
 
-/* Back to top link */
+a.external-link:hover {
+  color: #d7a86e;
+}
+
 .back-to-top {
   display: inline-block;
   margin-top: 30px;
   font-size: 0.9rem;
+  color: #5d4037;
+  text-decoration: none;
 }
 
-/* Responsive tweaks */
+.back-to-top:hover {
+  color: #a97455;
+}
+
+/* =============================
+   Footer
+============================= */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  text-align: center;
+  color: #6e4b3c;
+}
+
+/* =============================
+   Responsive Tweaks
+============================= */
 @media (max-width: 1000px) {
   .container {
     min-width: 90%;
   }
+
   .float-left,
   .float-right {
     float: none;
     width: 100%;
     max-width: 100%;
-    margin: 10px 0;
+    margin: 15px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 }
