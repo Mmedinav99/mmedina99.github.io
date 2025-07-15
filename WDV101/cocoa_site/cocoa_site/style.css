@@ -13,18 +13,18 @@
 }
 
 body {
-  background-color: #f3efe9; 
-  background-image: url('https://raw.githubusercontent.com/transparenttextures/cocoa-grain/master/cocoa-grain.png');
- 
-  background-repeat: repeat;
-  background-position: center;
-  background-size: auto;
+  background-color: #f3efe9;
+  background-image: url('images/cocoa-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   color: #3e2f2f;
   font-family: 'Lato', sans-serif;
   line-height: 1.7;
   font-size: 16px;
   padding-bottom: 50px;
 }
+
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
