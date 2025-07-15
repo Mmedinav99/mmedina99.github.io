@@ -1,0 +1,132 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
+
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f7f6;
+  color: #222;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+}
+
+h2, h3 {
+  margin: 20px 0 10px;
+  padding-top: 10px;
+  border-top: 3px solid #6b4f4f;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+nav {
+  background-color: #6b4f4f;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: #f9f7f6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #d9b382;
+  outline: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border: 3px solid #6b4f4f;
+  border-radius: 6px;
+}
+
+/* Float classes */
+.float-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  width: 40%;
+  max-width: 250px;
+  border-color: #a67c7c;
+}
+
+.float-right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 40%;
+  max-width: 250px;
+  border-color: #a67c7c;
+}
+
+/* Clear floats after sections */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Paragraph padding */
+p {
+  padding-bottom: 15px;
+}
+
+/* Link styles */
+a.external-link {
+  color: #6b4f4f;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Back to top link */
+.back-to-top {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1000px) {
+  .container {
+    min-width: 90%;
+  }
+  .float-left,
+  .float-right {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
