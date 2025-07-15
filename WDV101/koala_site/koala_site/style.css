@@ -356,3 +356,48 @@ nav a[aria-current="page"] {
     text-align: center;
   }
 }
+/* ===========================
+   Contact Form Styling
+=========================== */
+
+
+.contact-form {
+  
+  padding: 3rem 2rem 4rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  background: linear-gradient(to bottom right, #e8f5e9, #dcedc8);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 64, 0, 0.15);
+  position: relative;
+}
+
+.contact-form h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #2a4d2e;
+  text-align: center;
+  text-shadow: 1px 1px 2px #cdeac0;
+}
+
+
+.form-container {
+  border: 5px solid #4caf50;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(76, 175, 80, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 15px 45px rgba(76, 175, 80, 0.7);
+}
+
+
+.form-container iframe {
+  width: 100%;
+  height: 900px; 
+  border: none;
+  display: block;
+  border-radius: 12px;
+}
