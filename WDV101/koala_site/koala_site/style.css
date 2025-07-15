@@ -173,13 +173,13 @@ footer a {
     padding: 0.5rem;
   }
 
-  /* Smaller font size in columns on small screens (layout change) */
+  /* Smaller font size in columns on small screens */
   .column {
     font-size: 1rem;
     max-width: 100%;
   }
 
-  /* Adjust container width & background */
+  
   .container {
     width: 100%;
     margin: 0;
@@ -188,24 +188,29 @@ footer a {
   }
 }
 /* ===========================
-   Contact Form Styling
+   Enhanced Contact Form Styling 
 =========================== */
 .contact-form {
-  background-color: #eef6ee;
+  background: linear-gradient(to bottom right, #f2fff2, #d6f5d6);
   padding: 2rem;
   margin: 2rem auto;
-  border: 2px solid #2a4d2e;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 700px;
+  border: 4px double #2a4d2e;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 64, 0, 0.2);
+  max-width: 750px;
+  background-image: url('images/bamboo_pattern.png'); 
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .contact-form h2 {
   font-family: 'Merriweather', serif;
   color: #2a4d2e;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
   text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #2a4d2e;
+  padding-bottom: 0.5rem;
 }
 
 .contact-form form {
@@ -216,19 +221,29 @@ footer a {
 .contact-form label {
   margin-top: 1rem;
   font-weight: bold;
-  color: #2a4d2e;
+  color: #1f3d1f;
+  font-size: 1.1rem;
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-  padding: 0.75rem;
+  padding: 0.85rem;
   margin-top: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  background-color: #fff;
+  background-color: #ffffff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #2a4d2e;
+  outline: none;
 }
 
 .contact-form textarea {
@@ -237,9 +252,9 @@ footer a {
 }
 
 .form-buttons {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -247,15 +262,32 @@ footer a {
   background-color: #2a4d2e;
   color: #fff;
   font-weight: bold;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 2rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .form-buttons button:hover {
-  background-color: #1e3b21;
+  background-color: #1f3d1f;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Green Frames for Images
+=========================== */
+.media img {
+  border: 6px solid #4caf50;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+
+.media img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
