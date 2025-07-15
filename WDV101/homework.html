@@ -4,134 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WDV101 Homework Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
-  <style>
-    /* Base Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: 'IM Fell English SC', serif;
-      background-color: #2d1f14;
-      color: #e0c097;
-      padding-top: 70px; 
-      max-width: 1200px;
-      margin: 0 auto;
-      padding-left: 20px;
-      padding-right: 20px;
-      background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-      background-attachment: fixed;
-    }
+  <!-- Link to the shared external stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
 
-    /* HUD Navigation Bar */
-    .hud {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: linear-gradient(145deg, #4a2e18, #2c1b10);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 30px;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-      border-bottom: 2px solid #c27c0e;
-    }
-
-    .hud h2 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #e8c17b;
-    }
-
-    .hud nav a {
-      color: #f4d58d;
-      text-decoration: none;
-      font-weight: bold;
-      margin-left: 24px;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-
-    .hud nav a:hover {
-      color: #ffae42;
-      text-shadow: 0 0 6px #ffae42;
-    }
-
-    /* Main Content */
-    .content {
-      padding: 30px;
-      background-color: rgba(51, 35, 21, 0.9);
-      border: 2px solid #a56c1c;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .content:hover {
-      box-shadow: 0 0 20px rgba(204, 119, 34, 0.5);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #ffcc88;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 3px #000;
-    }
-
-    p {
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 25px;
-      margin-bottom: 20px;
-    }
-
-    ul li {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-    }
-
-    a {
-      color: #ffcc88;
-      text-decoration: none;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-
-    a:hover {
-      color: #ffd98a;
-      text-shadow: 0 0 6px #ffb84d;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .content {
-        padding: 20px;
-      }
-    }
-  </style>
+  <!-- Orbitron font used in style.css -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- HUD Navigation -->
   <div class="hud">
     <h2>Martin Medina</h2>
     <nav>
-      <a href="../index.html">🏠 Home</a>
+      <a href="/index.html">🏠 Home</a>
       <a href="https://github.com/Mmedinav99" target="_blank">🔗 GitHub</a>
     </nav>
   </div>
 
-  <div class="content">
+  <div class="about">
     <h1>WDV101 Homework</h1>
     <p>Welcome to my homework page! Below are links to my completed projects:</p>
 
@@ -143,7 +34,8 @@
       <li><a href="project5.html">Project 5: TBD</a></li>
     </ul>
 
-    <p><a href="../index.html">🔙 Back to Home Page</a></p>
+    <p><a href="/index.html">🔙 Back to Home Page</a></p>
   </div>
+
 </body>
 </html>
