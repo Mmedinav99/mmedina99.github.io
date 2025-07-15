@@ -10,16 +10,22 @@
 
 /* Body Styling */
 body {
-  font-family: 'Orbitron', sans-serif;
-  color: #d0d0d0;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 70px 20px 20px;
-  background-image: url('image/bground.jpg');
+  
+  background-image: url('image/bground.jpg'); 
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  
+  font-family: 'Orbitron', sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 20px 50px;
 }
+
 
 /* HUD Navigation Bar */
 .hud {
