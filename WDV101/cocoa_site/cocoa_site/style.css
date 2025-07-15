@@ -14,7 +14,8 @@
 
 body {
   background-color: #f3efe9; 
-  background-image: url('https://www.transparenttextures.com/patterns/cocoa-grain.png'); 
+  background-image: url('https://raw.githubusercontent.com/transparenttextures/cocoa-grain/master/cocoa-grain.png');
+ 
   background-repeat: repeat;
   background-position: center;
   background-size: auto;
