@@ -13,8 +13,12 @@
 }
 
 body {
-  background-color: #f3efe9; /* Light cocoa cream */
-  color: #3e2f2f;            /* Deep cocoa brown */
+  background-color: #f3efe9; 
+  background-image: url('https://www.transparenttextures.com/patterns/cocoa-grain.png'); 
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  color: #3e2f2f;
   font-family: 'Lato', sans-serif;
   line-height: 1.7;
   font-size: 16px;
