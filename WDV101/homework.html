@@ -5,11 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WDV101 Homework Page</title>
 
-  <!-- Link to shared CSS in root -->
-  <link rel="stylesheet" href="../style.css" />
-
   <!-- Orbitron font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Internal CSS for HUD fix -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      padding-top: 140px; /* Offset for HUD */
+    }
+
+    .hud {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 2px solid #d0d0d0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .hud h2 {
+      font-size: 2rem;
+      margin: 0 0 10px;
+    }
+
+    .hud nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .hud nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .hud nav a:hover {
+      color: #ff9900;
+    }
+
+    main.about {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .homework-link {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .homework-link:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,35 +84,33 @@
   <div class="hud">
     <h2>Martin Medina</h2>
     <nav>
-      <!-- Because this file is inside /WDV101/, going back to root index.html is "../index.html" -->
       <a href="../index.html">🏠 Home</a> 
       <a href="https://github.com/Mmedinav99" target="_blank" rel="noopener noreferrer">🔗 GitHub</a>
     </nav>
   </div>
 
   <main class="about">
-  <h1>WDV101 Homework</h1>
-  <p>Welcome to my homework page! Below are links to my completed projects:</p>
+    <h1>WDV101 Homework</h1>
+    <p>Welcome to my homework page! Below are links to my completed projects:</p>
 
-  <div>
-    <a href="koala_site/koala_site/koala_home.html" class="homework-link" role="button">Project 1: Koala Website</a>
-  </div>
-  <div>
-    <a href="isaac_site/isaac_home/isaac_home.html" class="homework-link" role="button">Project 2: The Binding of Isaac Site</a>
-  </div>
-  <div>
-    <a href="cocoa_site/cocoa_site/home.html" class="homework-link" role="button">Project 3: Cocoa Site</a>
-  </div>
-  <div>
-    <a href="project4.html" class="homework-link" role="button">Project 4: TBD</a>
-  </div>
-  <div>
-    <a href="project5.html" class="homework-link" role="button">Project 5: TBD</a>
-  </div>
+    <div>
+      <a href="koala_site/koala_site/koala_home.html" class="homework-link" role="button">Project 1: Koala Website</a>
+    </div>
+    <div>
+      <a href="isaac_site/isaac_home/isaac_home.html" class="homework-link" role="button">Project 2: The Binding of Isaac Site</a>
+    </div>
+    <div>
+      <a href="cocoa_site/cocoa_site/home.html" class="homework-link" role="button">Project 3: Cocoa Site</a>
+    </div>
+    <div>
+      <a href="project4.html" class="homework-link" role="button">Project 4: TBD</a>
+    </div>
+    <div>
+      <a href="project5.html" class="homework-link" role="button">Project 5: TBD</a>
+    </div>
 
-  <p><a href="../index.html" class="homework-link" role="button">🔙 Back to Home Page</a></p>
-</main>
-
+    <p><a href="../index.html" class="homework-link" role="button">🔙 Back to Home Page</a></p>
+  </main>
 
 </body>
 </html>
