@@ -10,7 +10,75 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Merriweather&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="koala_site/style.css" />
+  <style>
+    .adopt-form-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: #c9ddeb;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
+    fieldset {
+      border: 1px solid #aaa;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 0.75rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .form-buttons input {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #3a6e3a;
+      color: white;
+      cursor: pointer;
+    }
+
+    .form-buttons input:hover {
+      background-color: #2c552c;
+    }
+  </style>
 </head>
 <body>
 
@@ -47,6 +115,72 @@
         </ul>
 
         <p><a href="adoption_form.pdf" target="_blank" class="pdf-link">Download Adoption Form (PDF)</a></p>
+      </section>
+
+      <section class="adopt-form-container">
+        <form>
+          <p><strong>Yes! I am interested in adopting a Koala bear. Please send me information.</strong></p>
+
+          <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="first name" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="last name" required>
+
+            <label for="address">Street Address:</label>
+            <input type="text" id="address" name="address" placeholder="street address">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="city name">
+
+            <label for="state">State:</label>
+            <select id="state" name="state">
+              <option>Alabama</option>
+              <option>Alaska</option>
+              <option>Arizona</option>
+              <option>Arkansas</option>
+              
+            </select>
+
+            <label for="zip">Zip:</label>
+            <input type="text" id="zip" name="zip">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="name@anywhere.com" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+
+            <div class="radio-group">
+              <label><input type="radio" name="contact" value="Cell"> Cell</label>
+              <label><input type="radio" name="contact" value="Home"> Home</label>
+              <label><input type="radio" name="contact" value="Work"> Work</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Adoption Options</legend>
+
+            <p>Choose a category of a Koala that interests you. Check all that apply:</p>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="category" value="Joeys" checked> Joeys</label>
+              <label><input type="checkbox" name="category" value="Adults"> Adults</label>
+              <label><input type="checkbox" name="category" value="Mum & Joey"> Mum & Joey pairs</label>
+              <label><input type="checkbox" name="category" value="Wild"> In the Wild</label>
+            </div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <div class="form-buttons">
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+            </div>
+          </fieldset>
+        </form>
       </section>
     </main>
 
