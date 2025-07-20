@@ -3,59 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Pets to Go</title>
+  <title>About Pets To Go - Animal Shelter</title>
+  <!-- Author: Martin Medina -->
+  <!-- Date: 07/20/2025 -->
+  <meta name="description" content="Learn about the mission, history, and team of Pets to Go Animal Shelter, Springfield's no-kill shelter." />
+  <meta name="keywords" content="animal shelter mission, no-kill shelter history, Pets to Go team" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="pets_to_go/style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
-<body>
+<body id="top">
 
-  <header>
-    <div class="header-banner">
+  <header role="banner">
+    <div class="header-banner flex-container">
       <img src="images/logo.png" alt="Pets to Go Logo" width="80" height="80" />
       <h1>Pets to Go Animal Shelter</h1>
     </div>
-    <nav>
-      <ul class="nav-menu">
+
+    <nav role="navigation" aria-label="Primary Navigation">
+      <ul class="nav-menu flex-container">
         <li><a href="home.html">Home</a></li>
         <li><a href="about_our_pets.html">About Our Pets</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="about_pets_to_go.html" class="active">About Pets To Go</a></li>
+        <li><a href="about_pets_to_go.html" class="active" aria-current="page">About Pets To Go</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>About Pets To Go</h2>
-      <address>
-        Pets To Go Animal Shelter<br />
-        3183 S Veterans Pkwy<br />
-        Springfield, Illinois 62704<br />
-        <a href="tel:+12176983091">(217) 698-3091</a>
-      </address>
+  <main role="main" class="container">
+
+    <section id="history" aria-labelledby="history-heading">
+      <h2 id="history-heading">Our History</h2>
+      <p>Pets to Go was founded in 1990 with the mission to provide a safe haven for homeless animals in Springfield. We have grown to become one of the largest no-kill shelters in Illinois.</p>
+      <figure>
+        <img src="images/shelter-building.jpg" alt="Pets to Go Shelter Building" width="400" height="300" />
+        <figcaption>Our shelter facility in Springfield</figcaption>
+      </figure>
     </section>
 
-    <section>
-      <h3>Hours</h3>
-      <ul>
-        <li>Sunday: 12:00 noon to 5:00 pm</li>
-        <li>Monday – Thursday: 10:00 am to 7:00 pm</li>
-        <li>Friday: 10:00 am to 4:00 pm</li>
-        <li>Saturday: 9:00 am to 5:00 pm</li>
-      </ul>
+    <section id="mission" aria-labelledby="mission-heading">
+      <h2 id="mission-heading">Our Mission</h2>
+      <p>To rescue, shelter, and find loving homes for cats and dogs while educating the community on responsible pet ownership.</p>
     </section>
 
-    <section>
-      <p>Founded in 1996, Pets to Go is Springfield’s only no-kill animal shelter. Since its opening, we’ve placed over 18,000 cats and dogs in loving homes. We rescue animals from kill shelters and accept owner surrenders.</p>
-      <p>With 15 staff members and over 200 volunteers, we provide exceptional care. Many of our animals experience love for the first time here. Our shelter continues to grow and improve thanks to your support!</p>
+    <section id="team" aria-labelledby="team-heading">
+      <h2 id="team-heading">Meet Our Team</h2>
+      <p>Our dedicated staff and volunteers work tirelessly every day to care for our animals and find them forever homes.</p>
+      <figure>
+        <img src="images/team-photo.jpg" alt="Pets to Go staff and volunteers" width="400" height="300" />
+        <figcaption>Our caring team at Pets to Go</figcaption>
+      </figure>
     </section>
 
-    <a href="#top" class="back-to-top">Back to Top</a>
+    <aside aria-label="Back to top link">
+      <a href="#top" class="back-to-top">Back to Top</a>
+    </aside>
+
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>© 2025 Pets to Go Animal Shelter - Springfield, Illinois</p>
+    <p><a href="https://www.humanesociety.org/resources" target="_blank" rel="noopener noreferrer">Humane Society Resources</a></p>
   </footer>
 
 </body>
 </html>
+

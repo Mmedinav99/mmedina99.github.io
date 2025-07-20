@@ -3,49 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About our Pets - Pets to Go</title>
+  <title>About Our Pets - Pets to Go</title>
+  <!-- Author: Martin Medina -->
+  <!-- Date: 07/20/2025 -->
+  <meta name="description" content="Meet the adoptable pets at Pets to Go Animal Shelter and learn about our adoption process and volunteer opportunities." />
+  <meta name="keywords" content="adoptable pets, pet adoption, animal shelter, volunteers, Pets to Go" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="pets_to_go/style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
+<body id="top">
 
-<body>
-
-  <header>
-    <div class="header-banner">
+  <header role="banner">
+    <div class="header-banner flex-container">
       <img src="images/logo.png" alt="Pets to Go Logo" width="80" height="80" />
       <h1>Pets to Go Animal Shelter</h1>
     </div>
-    <nav>
-      <ul class="nav-menu">
+
+    <nav role="navigation" aria-label="Primary Navigation">
+      <ul class="nav-menu flex-container">
         <li><a href="home.html">Home</a></li>
-        <li><a href="about_our_pets.html" class="active">About Our Pets</a></li>
+        <li><a href="about_our_pets.html" class="active" aria-current="page">About Our Pets</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="about_pets_to_go.html">About Pets To Go</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Meet Our Pets</h2>
+  <main role="main" class="container">
+    <section aria-labelledby="meet-pets">
+      <h2 id="meet-pets">Meet Our Pets</h2>
       <p>Our shelter is home to a variety of adoptable dogs and cats who are ready for a second chance. Each pet is evaluated and cared for before being placed for adoption.</p>
+      <figure>
+        <img src="images/adoptable-dogs.jpg" alt="Adoptable dogs waiting for new homes" width="400" height="300" />
+        <figcaption>Our lovable adoptable dogs</figcaption>
+      </figure>
+      <figure>
+        <img src="images/adoptable-cats.jpg" alt="Adoptable cats relaxing at shelter" width="400" height="300" />
+        <figcaption>Our cuddly adoptable cats</figcaption>
+      </figure>
     </section>
 
-    <section id="volunteer">
-      <h3>Volunteer Opportunities</h3>
-      <p>Interested in helping out? We need animal caretakers, dog walkers, cat cuddlers, and event helpers. <a href="#contact">Contact us</a> to learn more.</p>
+    <section id="volunteer" aria-labelledby="volunteer-heading">
+      <h2 id="volunteer-heading">Volunteer Opportunities</h2>
+      <p>Interested in helping out? We need animal caretakers, dog walkers, cat cuddlers, and event helpers. <a href="contact.html#contact-form">Contact us</a> to learn more about how to get involved.</p>
     </section>
 
-    <section id="adoption">
-      <h3>Adoption Process</h3>
+    <section id="adoption" aria-labelledby="adoption-process">
+      <h2 id="adoption-process">Adoption Process</h2>
       <p>Visit us during shelter hours to meet our pets. After an interview and home visit, approved adopters can welcome a new furry family member!</p>
+      <p>For detailed steps, see our <a href="about_pets_to_go.html#adoption-info">adoption information page</a>.</p>
     </section>
 
-    <a href="#top" class="back-to-top">Back to Top</a>
+    <aside aria-label="Back to top link">
+      <a href="#top" class="back-to-top">Back to Top</a>
+    </aside>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>© 2025 Pets to Go Animal Shelter - Springfield, Illinois</p>
+    <p><a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer">Petfinder Adoption Resources</a></p>
   </footer>
 
 </body>
