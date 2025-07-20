@@ -23,18 +23,18 @@
     fieldset {
       border: 1px solid #aaa;
       border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     legend {
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
     }
 
     label {
       display: block;
-      margin-top: 0.75rem;
+      margin-top: 1rem;
       font-weight: 600;
     }
 
@@ -52,6 +52,17 @@
       box-sizing: border-box;
     }
 
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .flex-col {
+      flex: 1 1 45%;
+      min-width: 200px;
+    }
+
     .radio-group,
     .checkbox-group {
       display: flex;
@@ -62,21 +73,29 @@
 
     .form-buttons {
       display: flex;
+      justify-content: flex-start;
       gap: 1rem;
       margin-top: 1rem;
     }
 
     .form-buttons input {
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       border: none;
       border-radius: 6px;
       background-color: #3a6e3a;
       color: white;
       cursor: pointer;
+      font-weight: bold;
     }
 
     .form-buttons input:hover {
       background-color: #2c552c;
+    }
+
+    @media (max-width: 600px) {
+      .flex-col {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
@@ -124,29 +143,43 @@
           <fieldset>
             <legend>Contact Information</legend>
 
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="first name" required>
+            <div class="flex-row">
+              <div class="flex-col">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+              </div>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="last name" required>
+              <div class="flex-col">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+              </div>
+            </div>
 
             <label for="address">Street Address:</label>
-            <input type="text" id="address" name="address" placeholder="street address">
+            <input type="text" id="address" name="address" placeholder="Street address">
 
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" placeholder="city name">
+            <div class="flex-row">
+              <div class="flex-col">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="City name">
+              </div>
 
-            <label for="state">State:</label>
-            <select id="state" name="state">
-              <option>Alabama</option>
-              <option>Alaska</option>
-              <option>Arizona</option>
-              <option>Arkansas</option>
-              
-            </select>
+              <div class="flex-col">
+                <label for="state">State:</label>
+                <select id="state" name="state">
+                  <option value="">Select a state</option>
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>Arizona</option>
+                  <option>Arkansas</option>
+                </select>
+              </div>
 
-            <label for="zip">Zip:</label>
-            <input type="text" id="zip" name="zip">
+              <div class="flex-col">
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip" name="zip">
+              </div>
+            </div>
 
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" placeholder="name@anywhere.com" required>
@@ -173,7 +206,7 @@
             </div>
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Add any questions or comments here..."></textarea>
 
             <div class="form-buttons">
               <input type="submit" value="Submit">
@@ -208,6 +241,5 @@
     </footer>
 
   </div>
-
 </body>
 </html>
