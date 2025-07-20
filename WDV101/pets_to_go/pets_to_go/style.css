@@ -8,8 +8,9 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  background-color: #f9f9f9;
   color: #333;
+  background: url('images/background.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Flex container utility */
@@ -19,17 +20,26 @@ body {
   align-items: center;
 }
 
-/* Header banner */
+/* Header banner with banner background */
 .header-banner {
-  padding: 1rem;
-  background-color: #d0f0c0;
+  background: url('images/banner.png') no-repeat center;
+  background-size: cover;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* Header text */
+.header-banner img {
+  width: 80px;
+  height: 80px;
+}
+
 .header-banner h1 {
   font-family: 'Georgia', serif;
   font-weight: bold;
-  color: #2d5d34;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation bar */
@@ -38,9 +48,11 @@ nav {
 }
 
 .nav-menu {
+  display: flex;
   justify-content: center;
   list-style: none;
   padding: 0.75rem 0;
+  flex-wrap: wrap;
 }
 
 .nav-menu li {
@@ -52,8 +64,9 @@ nav {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.75rem;
   display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-menu a:hover,
@@ -67,29 +80,30 @@ nav {
 main {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
 }
 
-/* Intro section flex */
+/* Content section spacing */
+.content-section {
+  margin-bottom: 2rem;
+}
+
+/* Flex layout for intro section */
 #intro {
   gap: 2rem;
 }
 
-/* Flex items */
 .flex-item {
   flex: 1 1 50%;
 }
 
-/* Images responsive */
+/* Responsive images */
 .flex-item img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-}
-
-/* Content sections */
-.content-section {
-  margin-bottom: 2rem;
 }
 
 /* Back to top link */
@@ -113,6 +127,7 @@ footer {
   color: white;
   font-size: 0.9rem;
   margin-top: 3rem;
+  border-radius: 0 0 10px 10px;
 }
 
 /* Responsive design */
@@ -120,11 +135,22 @@ footer {
   .flex-container {
     flex-direction: column;
   }
+
   .nav-menu {
     flex-direction: column;
     align-items: center;
   }
+
   .nav-menu li {
     margin: 0.5rem 0;
+  }
+
+  .header-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-banner img {
+    margin-bottom: 0.5rem;
   }
 }
