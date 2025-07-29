@@ -11,6 +11,57 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="pets_to_go/style.css" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <style>
+    /* --- Success Message Animation --- */
+    .success-message {
+      display: none;
+      background-color: #dff0d8;
+      border: 2px solid #a6d8a8;
+      color: #2d5d34;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 2rem auto;
+      max-width: 600px;
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Validation Feedback --- */
+    input:invalid,
+    textarea:invalid,
+    select:invalid {
+      border: 2px solid #cc3333;
+      background-color: #fff5f5;
+    }
+
+    input:valid,
+    textarea:valid,
+    select:valid {
+      border: 2px solid #8fc694;
+    }
+
+    form button {
+      background-color: #4a7c40;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      margin-right: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #6ea96e;
+    }
+  </style>
 </head>
 <body id="top">
 
@@ -33,15 +84,20 @@
 
   <main role="main" class="container">
 
-    <section aria-labelledby="contact-heading">
+    <section aria-labelledby="contact-heading" class="content-section">
       <h2 id="contact-heading">Contact Us</h2>
       <p>Have questions or want to get involved? Reach out to us using the form below or visit our <a href="about_our_pets.html#volunteer">volunteer page</a> to learn how you can help.</p>
     </section>
 
-    <section aria-labelledby="form-heading">
+    <!-- Success message -->
+    <div id="successMessage" class="success-message" role="alert" aria-live="assertive">
+      ✅ Thank you! Your message has been successfully sent.
+    </div>
+
+    <section aria-labelledby="form-heading" class="content-section">
       <h2 id="form-heading">Contact Form</h2>
 
-      <form action="formhandler.php" method="post" novalidate aria-describedby="form-instructions">
+      <form id="contactForm" novalidate aria-describedby="form-instructions">
         <p id="form-instructions">All fields marked with <span aria-hidden="true">*</span> are required.</p>
 
         <div>
@@ -111,5 +167,23 @@
     <p><a href="https://www.aspca.org/contact-us" target="_blank" rel="noopener noreferrer">Contact ASPCA</a></p>
   </footer>
 
+  <!-- Simple JavaScript for feedback handling -->
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (form.checkValidity()) {
+        successMessage.style.display = "block";
+        form.reset();
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 6000);
+      } else {
+        form.reportValidity();
+      }
+    });
+  </script>
 </body>
 </html>
