@@ -11,6 +11,35 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="pets_to_go/style.css" />
   <link rel="icon" href="images/logo.png" type="image/png" />
+  <style>
+    /* Smooth rounded corners, shadow, and hover effect on images */
+    figure img {
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    figure img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    /* Center and style figcaption elegantly */
+    figure figcaption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 0.5rem;
+      color: #555;
+      font-size: 1rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
 <body id="top">
 
@@ -32,7 +61,6 @@
   </header>
 
   <main role="main" class="container">
-
     <section class="content-section" aria-labelledby="meet-pets">
       <h2 id="meet-pets">Meet Our Pets</h2>
       <p>Our shelter is home to a variety of adoptable dogs and cats who are ready for a second chance. Each pet is evaluated and cared for before being placed for adoption.</p>
@@ -60,7 +88,6 @@
     <aside aria-label="Back to top link">
       <a href="#top" class="back-to-top">Back to Top</a>
     </aside>
-
   </main>
 
   <footer role="contentinfo">
