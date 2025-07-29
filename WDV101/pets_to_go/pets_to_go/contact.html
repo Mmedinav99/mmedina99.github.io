@@ -1,191 +1,192 @@
+<!-- Author: Martin Medina -->
+<!-- Date: 07/20/2025 -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us - Pets to Go Animal Shelter</title>
-  <!-- Author: Martin Medina -->
-  <!-- Date: 07/20/2025 -->
-  <meta name="description" content="Contact Pets to Go Animal Shelter for inquiries, volunteering, or adoption questions." />
-  <meta name="keywords" content="contact, pets to go, animal shelter, volunteer, adoption, inquiries" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="pets_to_go/style.css" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us - Pets to Go Animal Shelter</title>
+    <meta name="description" content="Contact Pets to Go Animal Shelter for inquiries, volunteering, or adoption questions." />
+    <meta name="keywords" content="contact, pets to go, animal shelter, volunteer, adoption, inquiries" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pets_to_go/style.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
 
-  <style>
-    /* --- Success Message Animation --- */
-    .success-message {
-      display: none;
-      background-color: #dff0d8;
-      border: 2px solid #a6d8a8;
-      color: #2d5d34;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
-      font-size: 1.2rem;
-      margin: 2rem auto;
-      max-width: 600px;
-      animation: fadeIn 0.8s ease-in-out forwards;
-    }
+    <style>
+        /* --- Success Message Animation --- */
+        .success-message {
+            display: none;
+            background-color: #dff0d8;
+            border: 2px solid #a6d8a8;
+            color: #2d5d34;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    /* --- Validation Feedback --- */
-    input:invalid,
-    textarea:invalid,
-    select:invalid {
-      border: 2px solid #cc3333;
-      background-color: #fff5f5;
-    }
+        /* --- Validation Feedback --- */
+        input:invalid,
+        textarea:invalid,
+        select:invalid {
+            border: 2px solid #cc3333;
+            background-color: #fff5f5;
+        }
 
-    input:valid,
-    textarea:valid,
-    select:valid {
-      border: 2px solid #8fc694;
-    }
+        input:valid,
+        textarea:valid,
+        select:valid {
+            border: 2px solid #8fc694;
+        }
 
-    form button {
-      background-color: #4a7c40;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      margin-right: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+        form button {
+            background-color: #4a7c40;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            margin-right: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-    form button:hover {
-      background-color: #6ea96e;
-    }
-  </style>
+        form button:hover {
+            background-color: #6ea96e;
+        }
+    </style>
 </head>
 <body id="top">
 
-  <header role="banner">
-    <div class="header-banner flex-container">
-      <img src="images/logo.png" alt="Pets to Go Logo" width="80" height="80" />
-      <h1>Pets to Go Animal Shelter</h1>
-    </div>
-
-    <nav role="navigation" aria-label="Primary Navigation">
-      <ul class="nav-menu flex-container">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about_our_pets.html">About Our Pets</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="about_pets_to_go.html">About Pets To Go</a></li>
-        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main role="main" class="container">
-
-    <section aria-labelledby="contact-heading" class="content-section">
-      <h2 id="contact-heading">Contact Us</h2>
-      <p>Have questions or want to get involved? Reach out to us using the form below or visit our <a href="about_our_pets.html#volunteer">volunteer page</a> to learn how you can help.</p>
-    </section>
-
-    <!-- Success message -->
-    <div id="successMessage" class="success-message" role="alert" aria-live="assertive">
-      ✅ Thank you! Your message has been successfully sent.
-    </div>
-
-    <section aria-labelledby="form-heading" class="content-section">
-      <h2 id="form-heading">Contact Form</h2>
-
-      <form id="contactForm" novalidate aria-describedby="form-instructions">
-        <p id="form-instructions">All fields marked with <span aria-hidden="true">*</span> are required.</p>
-
-        <div>
-          <label for="full-name">Full Name <span aria-hidden="true">*</span></label><br />
-          <input type="text" id="full-name" name="full_name" required aria-required="true" placeholder="Your full name" />
+    <header role="banner">
+        <div class="header-banner flex-container">
+            <img src="images/logo.png" alt="Pets to Go Logo" width="80" height="80" />
+            <h1>Pets to Go Animal Shelter</h1>
         </div>
 
-        <div>
-          <label for="email">Email Address <span aria-hidden="true">*</span></label><br />
-          <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com" />
+        <nav role="navigation" aria-label="Primary Navigation">
+            <ul class="nav-menu flex-container">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_our_pets.html">About Our Pets</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about_pets_to_go.html">About Pets To Go</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+
+        <section aria-labelledby="contact-heading" class="content-section">
+            <h2 id="contact-heading">Contact Us</h2>
+            <p>Have questions or want to get involved? Reach out to us using the form below or visit our <a href="about_our_pets.html#volunteer">volunteer page</a> to learn how you can help.</p>
+            <p id="donate">You can also consider making a financial contribution. Your donations directly support our mission to rescue and care for homeless animals.</p>
+        </section>
+
+        <div id="successMessage" class="success-message" role="alert" aria-live="assertive">
+            ✅ Thank you! Your message has been successfully sent.
         </div>
 
-        <div>
-          <label for="phone">Phone Number</label><br />
-          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" aria-describedby="phone-format" />
-          <small id="phone-format">Format: 123-456-7890 or (123) 456-7890</small>
-        </div>
+        <section aria-labelledby="form-heading" class="content-section">
+            <h2 id="form-heading">Contact Form</h2>
 
-        <div>
-          <label for="inquiry-type">Inquiry Type <span aria-hidden="true">*</span></label><br />
-          <select id="inquiry-type" name="inquiry_type" required aria-required="true">
-            <option value="" disabled selected>Select an option</option>
-            <option value="adoption">Adoption</option>
-            <option value="volunteering">Volunteering</option>
-            <option value="donations">Donations</option>
-            <option value="general">General Inquiry</option>
-          </select>
-        </div>
+            <form id="contactForm" novalidate aria-describedby="form-instructions">
+                <p id="form-instructions">All fields marked with <span aria-hidden="true">*</span> are required.</p>
 
-        <div>
-          <label for="message">Message <span aria-hidden="true">*</span></label><br />
-          <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Write your message here"></textarea>
-        </div>
+                <div>
+                    <label for="full-name">Full Name <span aria-hidden="true">*</span></label><br />
+                    <input type="text" id="full-name" name="full_name" required aria-required="true" placeholder="Your full name" />
+                </div>
 
-        <fieldset>
-          <legend>Preferred Contact Method</legend>
-          <div>
-            <input type="radio" id="contact-email" name="contact_method" value="email" checked />
-            <label for="contact-email">Email</label>
-          </div>
-          <div>
-            <input type="radio" id="contact-phone" name="contact_method" value="phone" />
-            <label for="contact-phone">Phone</label>
-          </div>
-        </fieldset>
+                <div>
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label><br />
+                    <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com" />
+                </div>
 
-        <div>
-          <input type="checkbox" id="newsletter" name="newsletter" value="yes" />
-          <label for="newsletter">Subscribe to our newsletter</label>
-        </div>
+                <div>
+                    <label for="phone">Phone Number</label><br />
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" aria-describedby="phone-format" />
+                    <small id="phone-format">Format: 123-456-7890 or (123) 456-7890</small>
+                </div>
 
-        <div>
-          <button type="submit">Send Message</button>
-          <button type="reset">Reset Form</button>
-        </div>
-      </form>
-    </section>
+                <div>
+                    <label for="inquiry-type">Inquiry Type <span aria-hidden="true">*</span></label><br />
+                    <select id="inquiry-type" name="inquiry_type" required aria-required="true">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="adoption">Adoption</option>
+                        <option value="volunteering">Volunteering</option>
+                        <option value="donations">Donations</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                </div>
 
-    <aside aria-label="Back to top link">
-      <a href="#top" class="back-to-top">Back to Top</a>
-    </aside>
+                <div>
+                    <label for="message">Message <span aria-hidden="true">*</span></label><br />
+                    <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Write your message here"></textarea>
+                </div>
 
-  </main>
+                <fieldset>
+                    <legend>Preferred Contact Method</legend>
+                    <div>
+                        <input type="radio" id="contact-email" name="contact_method" value="email" checked />
+                        <label for="contact-email">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contact-phone" name="contact_method" value="phone" />
+                        <label for="contact-phone">Phone</label>
+                    </div>
+                </fieldset>
 
-  <footer role="contentinfo">
-    <p>© 2025 Pets to Go Animal Shelter - Springfield, Illinois</p>
-    <p><a href="https://www.aspca.org/contact-us" target="_blank" rel="noopener noreferrer">Contact ASPCA</a></p>
-  </footer>
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes" />
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </div>
 
-  <!-- Simple JavaScript for feedback handling -->
-  <script>
-    const form = document.getElementById("contactForm");
-    const successMessage = document.getElementById("successMessage");
+                <div>
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (form.checkValidity()) {
-        successMessage.style.display = "block";
-        form.reset();
-        setTimeout(() => {
-          successMessage.style.display = "none";
-        }, 6000);
-      } else {
-        form.reportValidity();
-      }
-    });
-  </script>
+        <aside aria-label="Back to top link">
+            <a href="#top" class="back-to-top">Back to Top</a>
+        </aside>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>© 2025 Pets to Go Animal Shelter - Springfield, Illinois</p>
+        <p><a href="https://www.aspca.org/contact-us" target="_blank" rel="noopener noreferrer">Contact ASPCA</a></p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (form.checkValidity()) {
+                successMessage.style.display = "block";
+                form.reset();
+                setTimeout(() => {
+                    successMessage.style.display = "none";
+                }, 6000);
+            } else {
+                form.reportValidity();
+            }
+        });
+    </script>
 </body>
 </html>

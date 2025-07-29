@@ -1,140 +1,219 @@
+<!-- Author: Martin Medina -->
+<!-- Date: 07/20/2025 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery - Pets To Go</title>
-  <!-- Author: Martin Medina -->
-  <!-- Date: 07/20/2025 -->
-  <meta name="description" content="View heartwarming photos of our adoptable pets, happy adoptions, and events at Pets to Go." />
-  <meta name="keywords" content="pet photos, adoption gallery, animal shelter events, happy tails" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
-  <style>
-    img {
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
-      height: auto;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery - Pets To Go</title>
+    <meta name="description" content="View heartwarming photos of our adoptable pets, happy adoptions, and events at Pets to Go, including details on current pets available for adoption." />
+    <meta name="keywords" content="pet photos, adoption gallery, animal shelter events, happy tails, adoptable cats, adoptable dogs, current pets" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <style>
+        img {
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            height: auto;
+        }
 
-    img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
-    }
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+        }
 
-    figure {
-      text-align: center;
-      margin: 1.5rem;
-      padding: 0.5rem;
-      border-radius: 16px;
-      background-color: #fefefe;
-    }
+        figure {
+            text-align: center;
+            margin: 1.5rem;
+            padding: 0.5rem;
+            border-radius: 16px;
+            background-color: #fefefe;
+        }
 
-    figcaption {
-      font-weight: bold;
-      font-size: 1.1em;
-      margin-top: 0.5em;
-      color: #444;
-    }
+        figcaption {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 0.5em;
+            color: #444;
+        }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
 
-    h2 {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 2rem;
-    }
+        h2 {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
 
-    p {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
 
-    .back-to-top {
-      display: block;
-      text-align: center;
-      margin: 3rem 0 1rem;
-      font-weight: bold;
-      color: #0077cc;
-      text-decoration: none;
-    }
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin: 3rem 0 1rem;
+            font-weight: bold;
+            color: #0077cc;
+            text-decoration: none;
+        }
 
-    .back-to-top:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
+
+        .pet-profile {
+            background-color: #e6f7ff; /* Light blue background for pet profiles */
+            border: 1px solid #cceeff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .pet-profile h3 {
+            color: #0056b3;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .pet-profile img {
+            max-width: 250px; /* Smaller images for individual profiles */
+            display: block;
+            margin: 1rem auto;
+            border-radius: 8px;
+        }
+
+        .pet-profile ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+
+        .pet-profile ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .pet-profile .contact-info {
+            font-weight: bold;
+            margin-top: 1rem;
+            color: #333;
+            text-align: center;
+        }
+    </style>
 </head>
 <body id="top">
 
-  <header role="banner">
-    <div class="header-banner flex-container">
-      <img src="images/logo.png" alt="Pets to Go Logo" width="80" height="80" />
-      <h1>Pets to Go Animal Shelter</h1>
-    </div>
+    <header role="banner">
+        <div class="header-banner flex-container">
+            <img src="images/logo.png" alt="Pets to Go Logo" width="80" height="80" />
+            <h1>Pets to Go Animal Shelter</h1>
+        </div>
 
-    <nav role="navigation" aria-label="Primary Navigation">
-      <ul class="nav-menu flex-container">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about_our_pets.html">About Our Pets</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="about_pets_to_go.html">About Pets To Go</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav role="navigation" aria-label="Primary Navigation">
+            <ul class="nav-menu flex-container">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_our_pets.html">About Our Pets</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about_pets_to_go.html">About Pets To Go</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main role="main" class="container">
-    <section aria-labelledby="gallery-heading">
-      <h2 id="gallery-heading">Photo Gallery</h2>
-      <p>Enjoy some of our favorite moments with adoptable pets, successful adoptions, and shelter events!</p>
+    <main role="main" class="container">
+        <section aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Photo Gallery</h2>
+            <p>Enjoy some of our favorite moments with adoptable pets, successful adoptions, and shelter events!</p>
 
-      <div class="gallery-grid">
-        <figure>
-          <img src="images/cat-cuddle.jpg" alt="Volunteer cuddling a cat" />
-          <figcaption>Snuggles with our shyest cat</figcaption>
-        </figure>
-        <figure>
-          <img src="images/dog-walk.jpg" alt="Volunteer walking a dog" />
-          <figcaption>Daily dog walks keep tails wagging</figcaption>
-        </figure>
-        <figure>
-          <img src="images/adoption-day.jpg" alt="Family adopting a puppy" />
-          <figcaption>A happy forever family</figcaption>
-        </figure>
-        <figure>
-          <img src="images/pet-playtime.jpg" alt="Pets playing in the yard" />
-          <figcaption>Playtime in our fenced yard</figcaption>
-        </figure>
-        <figure>
-          <img src="images/event-booth.jpg" alt="Pets To Go booth at a local fair" />
-          <figcaption>Outreach at the local fair</figcaption>
-        </figure>
-        <figure>
-          <img src="images/kitten-nap.jpg" alt="Kittens sleeping together" />
-          <figcaption>Nap time for rescued kittens</figcaption>
-        </figure>
-      </div>
-    </section>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="images/cat-cuddle.jpg" alt="Volunteer cuddling a cat" />
+                    <figcaption>Snuggles with our shyest cat</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/dog-walk.jpg" alt="Volunteer walking a dog" />
+                    <figcaption>Daily dog walks keep tails wagging</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adoption-day.jpg" alt="Family adopting a puppy" />
+                    <figcaption>A happy forever family</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/pet-playtime.jpg" alt="Pets playing in the yard" />
+                    <figcaption>Playtime in our fenced yard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/event-booth.jpg" alt="Pets To Go booth at a local fair" />
+                    <figcaption>Outreach at the local fair</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/kitten-nap.jpg" alt="Kittens sleeping together" />
+                    <figcaption>Nap time for rescued kittens</figcaption>
+                </figure>
+            </div>
+        </section>
 
-    <aside aria-label="Back to top link">
-      <a href="#top" class="back-to-top">Back to Top</a>
-    </aside>
-  </main>
+        <section aria-labelledby="current-pets-heading" class="content-section">
+            <h2 id="current-pets-heading">Meet Some of Our Current Adoptable Pets</h2>
+            <p>These wonderful animals are currently seeking their forever homes. Click on their profiles to learn more!</p>
 
-  <footer role="contentinfo">
-    <p>© 2025 Pets to Go Animal Shelter - Springfield, Illinois</p>
-    <p><a href="https://www.petfinder.com/happy-tails/" target="_blank" rel="noopener noreferrer">More Happy Tails</a></p>
-  </footer>
+            <div class="gallery-grid">
+                <article class="pet-profile">
+                    <h3>Snowball & Sally</h3>
+                    <img src="images/placeholder_cat_duo.jpg" alt="Snowball and Sally, two kittens together" /> <ul>
+                        <li><strong>Ages:</strong> 6 months old</li>
+                        <li><strong>Type:</strong> Spayed female domestic shorthairs</li>
+                        <li><strong>Weight:</strong> Snowball (4 lbs), Sally (5 lbs)</li>
+                        <li><strong>Description:</strong> If you’re looking to bring some love and joy into your home, look no further than these two girls. They’re 6-month-old rescues—amazingly sweet and loving. They’re affectionate (big-time purrers and cuddlers), playful, and endlessly entertaining. They are also healthy, have had their shots, been spayed, and are litterbox trained. Because they’ve bonded to each other, we’d like to keep them together.</li>
+                    </ul>
+                </article>
+
+                <article class="pet-profile">
+                    <h3>Astro</h3>
+                    <img src="images/placeholder_cat_single.jpg" alt="Astro, a single cat" /> <ul>
+                        <li><strong>Age:</strong> 2 years old</li>
+                        <li><strong>Type:</strong> Neutered male, domestic shorthair</li>
+                        <li><strong>Weight:</strong> 11 lbs (almost 12 pounds!)</li>
+                        <li><strong>Description:</strong> Astro can thank his lucky stars, because after a car hit him, he made it out of the vet hospital in Springfield and found a temporary home with us. Astro’s a little nervous, but once he settles down, he loves people to pet him. He’s lean and lanky, and even though we think he’s fit to run a kitty marathon, he weighs almost 12 pounds! Astro is a sweetheart, but he’s very scared right now. Come meet with him and see what a great guy he can be. Maybe you can give him his forever home!</li>
+                    </ul>
+                    <p class="contact-info">For information about Astro, call Jessica at Pets to Go: (555) 555-5555.</p>
+                </article>
+
+                <article class="pet-profile">
+                    <h3>Cindy</h3>
+                    <img src="images/placeholder_dog_single.jpg" alt="Cindy, a single dog" /> <ul>
+                        <li><strong>Age:</strong> 3 years old</li>
+                        <li><strong>Type:</strong> Spayed female, Shepherd mix</li>
+                        <li><strong>Weight:</strong> 40 lbs</li>
+                        <li><strong>Description:</strong> Cindy came to us because her family was splitting up. She’s never gotten the attention a young dog needs. Cindy is super playful. She loves toys, and her favorite game is fetch. She’s a smart cookie and adapts well to positive training. She already knows “sit,” “down,” “stay,” “shake,” and “sit pretty,” and she’s learning more fun tricks like “roll over.” Cindy is house-trained, rides well in the car, and enjoys being brushed and groomed. She behaves well around the house and respects her boundaries. This special girl needs an adult-only home with people who have experience with large dogs, so she can continue to develop into a well-adjusted dog. Cindy needs someone who’ll give her very clear rules, lots of love, and plenty of exercise. In return, she’ll be your devoted companion.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <aside aria-label="Back to top link">
+            <a href="#top" class="back-to-top">Back to Top</a>
+        </aside>
+    </main>
+
+    <footer role="contentinfo">
+        <p>© 2025 Pets to Go Animal Shelter - Springfield, Illinois</p>
+        <p><a href="https://www.petfinder.com/happy-tails/" target="_blank" rel="noopener noreferrer">More Happy Tails</a></p>
+    </footer>
 
 </body>
 </html>
