@@ -1,7 +1,6 @@
 <!-- Author: Martin Medina -->
 <!-- Date: 07/20/2025 -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +63,71 @@
         form button:hover {
             background-color: #6ea96e;
         }
+
+        /* --- Highlight Sections --- */
+        .highlight-section {
+            background-color: #f4fdf4;
+            border-left: 6px solid #4a7c40;
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .highlight-section h3 {
+            color: #2f5d3c;
+            margin-top: 0;
+        }
+
+        .highlight-section a {
+            color: #4a7c40;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* --- Form Styling --- */
+        .content-section form {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        form div, form fieldset {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.6rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        fieldset legend {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2rem;
+            font-weight: bold;
+            color: #4a7c40;
+        }
+
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body id="top">
@@ -91,7 +155,17 @@
         <section aria-labelledby="contact-heading" class="content-section">
             <h2 id="contact-heading">Contact Us</h2>
             <p>Have questions or want to get involved? Reach out to us using the form below or visit our <a href="about_our_pets.html#volunteer">volunteer page</a> to learn how you can help.</p>
-            <p id="donate">You can also consider making a financial contribution. Your donations directly support our mission to rescue and care for homeless animals.</p>
+        </section>
+
+        <!-- New Highlighted Sections -->
+        <section class="highlight-section" aria-labelledby="volunteer-highlight">
+            <h3 id="volunteer-highlight">💚 Volunteer With Us</h3>
+            <p>Looking to make a difference? <a href="about_our_pets.html#volunteer">Become a volunteer</a> and help us care for our furry friends. Whether it's walking dogs, cleaning kennels, or helping with events, there's a role for you!</p>
+        </section>
+
+        <section class="highlight-section" aria-labelledby="donate-highlight">
+            <h3 id="donate-highlight">🐾 Make a Donation</h3>
+            <p>Your generosity helps us provide food, medical care, and shelter to animals in need. <a href="about_pets_to_go.html#donate">Donate today</a> and be part of the change.</p>
         </section>
 
         <div id="successMessage" class="success-message" role="alert" aria-live="assertive">
@@ -105,23 +179,23 @@
                 <p id="form-instructions">All fields marked with <span aria-hidden="true">*</span> are required.</p>
 
                 <div>
-                    <label for="full-name">Full Name <span aria-hidden="true">*</span></label><br />
+                    <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
                     <input type="text" id="full-name" name="full_name" required aria-required="true" placeholder="Your full name" />
                 </div>
 
                 <div>
-                    <label for="email">Email Address <span aria-hidden="true">*</span></label><br />
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
                     <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com" />
                 </div>
 
                 <div>
-                    <label for="phone">Phone Number</label><br />
+                    <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" aria-describedby="phone-format" />
                     <small id="phone-format">Format: 123-456-7890 or (123) 456-7890</small>
                 </div>
 
                 <div>
-                    <label for="inquiry-type">Inquiry Type <span aria-hidden="true">*</span></label><br />
+                    <label for="inquiry-type">Inquiry Type <span aria-hidden="true">*</span></label>
                     <select id="inquiry-type" name="inquiry_type" required aria-required="true">
                         <option value="" disabled selected>Select an option</option>
                         <option value="adoption">Adoption</option>
@@ -132,7 +206,7 @@
                 </div>
 
                 <div>
-                    <label for="message">Message <span aria-hidden="true">*</span></label><br />
+                    <label for="message">Message <span aria-hidden="true">*</span></label>
                     <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Write your message here"></textarea>
                 </div>
 
