@@ -14,23 +14,135 @@
     <link rel="icon" href="images/logo.png" type="image/png" />
 
     <style>
+        /* --- General Body and Container Styling --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header and Navigation --- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the banner content */
+            margin-bottom: 10px;
+        }
+
+        .header-banner img {
+            margin-right: 15px;
+            border-radius: 50%; /* Make the logo round */
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        .header-banner h1 {
+            color: #4a7c40;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center the nav items */
+            background-color: #4a7c40;
+            border-radius: 8px;
+            overflow: hidden; /* Ensures border-radius applies to children */
+        }
+
+        .nav-menu li a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background-color: #6ea96e;
+            transform: translateY(-2px); /* Slight lift on hover/active */
+        }
+
+        /* --- Hero Section Styling --- */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400?text=Happy+Pets') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero-section h2 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .hero-section .button {
+            display: inline-block;
+            background-color: #ffc107; /* A bright, inviting yellow */
+            color: #333;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-section .button:hover {
+            background-color: #e0a800;
+            transform: translateY(-3px);
+        }
+
         /* --- Success Message Animation --- */
         .success-message {
             display: none;
             background-color: #dff0d8;
             border: 2px solid #a6d8a8;
             color: #2d5d34;
-            padding: 1rem;
+            padding: 1.5rem; /* Increased padding */
             border-radius: 10px;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem; /* Larger font size */
             margin: 2rem auto;
             max-width: 600px;
             animation: fadeIn 0.8s ease-in-out forwards;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added shadow */
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
+            from { opacity: 0; transform: translateY(-20px); } /* More pronounced animation */
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -48,86 +160,221 @@
             border: 2px solid #8fc694;
         }
 
+        /* --- Form Button Styling --- */
         form button {
             background-color: #4a7c40;
             color: white;
             border: none;
-            padding: 0.7rem 1.5rem;
-            font-size: 1rem;
+            padding: 0.8rem 1.8rem; /* Increased padding */
+            font-size: 1.1rem; /* Larger font size */
             margin-right: 1rem;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Added shadow */
+        }
+
+        form button[type="reset"] {
+            background-color: #6c757d; /* Different color for reset button */
         }
 
         form button:hover {
             background-color: #6ea96e;
+            transform: translateY(-2px);
+        }
+
+        form button[type="reset"]:hover {
+            background-color: #8a939a;
         }
 
         /* --- Highlight Sections --- */
         .highlight-section {
             background-color: #f4fdf4;
-            border-left: 6px solid #4a7c40;
-            padding: 1.2rem 1.5rem;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border-left: 8px solid #4a7c40; /* Thicker border */
+            padding: 1.5rem 2rem; /* Increased padding */
+            margin: 2.5rem 0; /* Increased margin */
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Stronger shadow */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically align content */
         }
 
         .highlight-section h3 {
             color: #2f5d3c;
             margin-top: 0;
+            font-size: 1.8rem; /* Larger heading */
+            margin-left: 15px; /* Space from icon */
+        }
+
+        .highlight-section p {
+            font-size: 1.1rem; /* Larger text */
+            margin-left: 15px; /* Space from icon */
         }
 
         .highlight-section a {
             color: #4a7c40;
             font-weight: bold;
-            text-decoration: underline;
+            text-decoration: none; /* No underline by default */
+            transition: color 0.3s, text-decoration 0.3s;
         }
+
+        .highlight-section a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #2f5d3c;
+        }
+
+        .highlight-section .icon {
+            font-size: 3rem; /* Large icons */
+            color: #4a7c40;
+            margin-right: 20px;
+        }
+
 
         /* --- Form Styling --- */
         .content-section form {
             background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 12px;
-            max-width: 700px;
+            padding: 2.5rem; /* Increased padding */
+            border-radius: 15px; /* More rounded corners */
+            max-width: 750px; /* Slightly wider form */
             margin: auto;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Stronger shadow */
         }
 
         form div, form fieldset {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem; /* Increased margin */
         }
 
         label {
             font-weight: bold;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem; /* Increased margin */
+            color: #555;
         }
 
         input, select, textarea {
-            width: 100%;
-            padding: 0.6rem;
-            font-size: 1rem;
-            border-radius: 6px;
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 0.8rem 10px; /* Increased padding */
+            font-size: 1.05rem; /* Slightly larger font */
+            border-radius: 8px; /* More rounded corners */
             border: 1px solid #ccc;
+            box-sizing: border-box; /* Include padding in width */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #4a7c40;
+            box-shadow: 0 0 8px rgba(74, 124, 64, 0.2);
+            outline: none;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            background-color: #fcfcfc;
         }
 
         fieldset legend {
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0 10px;
+            color: #4a7c40;
+            font-size: 1.15rem;
+        }
+
+        fieldset div {
+            margin-bottom: 0.8rem;
+        }
+
+        fieldset input[type="radio"],
+        fieldset input[type="checkbox"] {
+            width: auto; /* Override full width for radios/checkboxes */
+            margin-right: 8px;
         }
 
         .back-to-top {
             display: inline-block;
-            margin-top: 2rem;
+            margin-top: 3rem; /* Increased margin */
             font-weight: bold;
             color: #4a7c40;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.2s;
         }
 
         .back-to-top:hover {
             text-decoration: underline;
+            color: #2f5d3c;
+            transform: translateY(-2px);
         }
+
+        /* --- Footer Styling --- */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e0a800;
+        }
+
+        /* --- Divider Styling --- */
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+            margin: 3rem 0;
+        }
+
+        .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: #4a7c40;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #6ea96e;
+            border-radius: 2px;
+        }
+
+        .content-section p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Icon styling for list items, etc. if needed */
+        .icon-list li::before {
+            content: "🐾"; /* Example paw print icon */
+            margin-right: 10px;
+            color: #4a7c40;
+        }
+
     </style>
 </head>
 <body id="top">
@@ -152,28 +399,43 @@
 
     <main role="main" class="container">
 
-        <section aria-labelledby="contact-heading" class="content-section">
-            <h2 id="contact-heading">Contact Us</h2>
-            <p>Have questions or want to get involved? Reach out to us using the form below or visit our <a href="about_our_pets.html#volunteer">volunteer page</a> to learn how you can help.</p>
+        <section class="hero-section" aria-labelledby="hero-title">
+            <h2 id="hero-title">Ready to Connect? We're Here!</h2>
+            <p>Whether you're looking to adopt, volunteer, donate, or just have a question, we'd love to hear from you. Your support helps us give every animal a second chance.</p>
+            <a href="#contactForm" class="button">Send Us a Message</a>
         </section>
 
-        <!-- New Highlighted Sections -->
+        <hr class="section-divider">
+
+        <section aria-labelledby="contact-heading" class="content-section">
+            <h2 id="contact-heading">Get in Touch with Pets to Go</h2>
+            <p>Our dedicated team is ready to assist you. Fill out the form below for general inquiries, or explore our quick links for specific needs.</p>
+        </section>
+
         <section class="highlight-section" aria-labelledby="volunteer-highlight">
-            <h3 id="volunteer-highlight">💚 Volunteer With Us</h3>
-            <p>Looking to make a difference? <a href="about_our_pets.html#volunteer">Become a volunteer</a> and help us care for our furry friends. Whether it's walking dogs, cleaning kennels, or helping with events, there's a role for you!</p>
+            <span class="icon" role="img" aria-label="Green heart icon">💚</span>
+            <div>
+                <h3 id="volunteer-highlight">Volunteer With Us</h3>
+                <p>Looking to make a difference? <a href="about_our_pets.html#volunteer">Become a volunteer</a> and help us care for our furry friends. Whether it's walking dogs, cleaning kennels, or helping with events, there's a role for you!</p>
+            </div>
         </section>
 
         <section class="highlight-section" aria-labelledby="donate-highlight">
-            <h3 id="donate-highlight">🐾 Make a Donation</h3>
-            <p>Your generosity helps us provide food, medical care, and shelter to animals in need. <a href="about_pets_to_go.html#donate">Donate today</a> and be part of the change.</p>
+            <span class="icon" role="img" aria-label="Paw print icon">🐾</span>
+            <div>
+                <h3 id="donate-highlight">Make a Donation</h3>
+                <p>Your generosity helps us provide food, medical care, and shelter to animals in need. <a href="about_pets_to_go.html#donate">Donate today</a> and be part of the change.</p>
+            </div>
         </section>
 
+        <hr class="section-divider">
+
         <div id="successMessage" class="success-message" role="alert" aria-live="assertive">
-            ✅ Thank you! Your message has been successfully sent.
+            ✅ Thank you! Your message has been successfully sent. We'll get back to you soon.
         </div>
 
         <section aria-labelledby="form-heading" class="content-section">
-            <h2 id="form-heading">Contact Form</h2>
+            <h2 id="form-heading">Send Us a Message</h2>
 
             <form id="contactForm" novalidate aria-describedby="form-instructions">
                 <p id="form-instructions">All fields marked with <span aria-hidden="true">*</span> are required.</p>
