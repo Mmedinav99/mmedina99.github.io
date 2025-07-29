@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - Pets To Go</title>
+  <!-- Author: Martin Medina -->
+  <!-- Date: 07/20/2025 -->
+  <meta name="description" content="View heartwarming photos of our adoptable pets, happy adoptions, and events at Pets to Go." />
+  <meta name="keywords" content="pet photos, adoption gallery, animal shelter events, happy tails" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pets_to_go/style.css" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <style>
+    img {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    figure {
+      text-align: center;
+      margin: 2em auto;
+    }
+
+    figcaption {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-top: 0.5em;
+      color: #444;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <header role="banner">
+    <div class="header-banner flex-container">
+      <img src="images/logo.png" alt="Pets to Go Logo" width="80" height="80" />
+      <h1>Pets to Go Animal Shelter</h1>
+    </div>
+
+    <nav role="navigation" aria-label="Primary Navigation">
+      <ul class="nav-menu flex-container">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about_our_pets.html">About Our Pets</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about_pets_to_go.html">About Pets To Go</a></li>
+        <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" class="container">
+    <section aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Photo Gallery</h2>
+      <p>Enjoy some of our favorite moments with adoptable pets, successful adoptions, and shelter events!</p>
+
+      <div class="gallery-grid">
+        <figure>
+          <img src="images/cat-cuddle.jpg" alt="Volunteer cuddling a cat" width="300" height="200" />
+          <figcaption>Snuggles with our shyest cat</figcaption>
+        </figure>
+        <figure>
+          <img src="images/dog-walk.jpg" alt="Volunteer walking a dog" width="300" height="200" />
+          <figcaption>Daily dog walks keep tails wagging</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adoption-day.jpg" alt="Family adopting a puppy" width="300" height="200" />
+          <figcaption>A happy forever family</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pet-playtime.jpg" alt="Pets playing in the yard" width="300" height="200" />
+          <figcaption>Playtime in our fenced yard</figcaption>
+        </figure>
+        <figure>
+          <img src="images/event-booth.jpg" alt="Pets To Go booth at a local fair" width="300" height="200" />
+          <figcaption>Outreach at the local fair</figcaption>
+        </figure>
+        <figure>
+          <img src="images/kitten-nap.jpg" alt="Kittens sleeping together" width="300" height="200" />
+          <figcaption>Nap time for rescued kittens</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <aside aria-label="Back to top link">
+      <a href="#top" class="back-to-top">Back to Top</a>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Pets to Go Animal Shelter - Springfield, Illinois</p>
+    <p><a href="https://www.petfinder.com/happy-tails/" target="_blank" rel="noopener noreferrer">More Happy Tails</a></p>
+  </footer>
+
+</body>
+</html>
