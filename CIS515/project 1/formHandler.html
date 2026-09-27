@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Submission - Martin Medina</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <header class="banner">
+
+        <div class="banner-image">
+            <img src="images/banner.jpg" alt="Job Application Tracker Banner">
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Job Tracker Project</a></li>
+                <li><a href="mobile.html">From Web to Mobile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <h1>Form Submission</h1>
+
+        <section>
+
+            <h2>Thank You!</h2>
+
+            <p>Your information has been submitted successfully.</p>
+
+            <h3>Submitted Information</h3>
+
+            <p>
+                <strong>Name:</strong>
+                <span id="name"></span>
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <span id="email"></span>
+            </p>
+
+            <p>
+                <strong>Subject:</strong>
+                <span id="subject"></span>
+            </p>
+
+            <p>
+                <strong>Message:</strong>
+                <span id="message"></span>
+            </p>
+
+            <p>
+                <a href="contact.html">Return to Contact Page</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Martin Medina</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("name").textContent =
+            params.get("name") || "";
+
+        document.getElementById("email").textContent =
+            params.get("email") || "";
+
+        document.getElementById("subject").textContent =
+            params.get("subject") || "";
+
+        document.getElementById("message").textContent =
+            params.get("message") || "";
+    </script>
+
+</body>
+</html>
