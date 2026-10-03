@@ -2,109 +2,257 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Martin Medina - Contact</title>
+    <title>Martin Medina - Contact</title>
 
-  <!-- Link to shared stylesheet in root -->
-  <link rel="stylesheet" href="styles/style.css" />
+    <!-- Bootstrap CDN -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    >
 
-  <!-- Orbitron font used in CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
 
-  <!-- HUD Navigation -->
-  <div class="hud">
+    <!-- Bootstrap Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bootstrap-navbar">
+        <div class="container-fluid container-md">
 
-    <h2>Martin Medina</h2>
+            <a class="navbar-brand" href="index.html">Martin Medina</a>
 
-    <nav>
-      <a href="index.html">🏠 Home</a>
-      <a href="about.html">👤 About</a>
-      <a href="contact.html">📧 Contact</a>
-      <a href="CIS515/homework.html">📚 Homework</a>
-      <a href="https://github.com/Mmedinav99" target="_blank" rel="noopener noreferrer">🔗 GitHub</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            🏠 Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            👤 About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">
+                            📧 Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="CIS515/homework.html">
+                            📚 Homework
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="https://github.com/Mmedinav99"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            🔗 GitHub
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
     </nav>
 
-  </div>
+    <!-- Bootstrap responsive container -->
+    <div class="container-fluid container-md">
 
-  <header>
+        <header>
 
-    <h1>Contact Me</h1>
+            <h1>Contact Me</h1>
 
-    <p>Feel free to get in touch with me.</p>
+            <p>
+                Feel free to get in touch with me.
+            </p>
 
-  </header>
+        </header>
 
-  <main>
+        <main>
 
-    <section class="about">
+            <section class="about">
 
-      <h2>Contact Information</h2>
+                <h2>Contact Information</h2>
 
-      <p>
-        If you would like to contact me regarding my coursework,
-        projects, or web development work, you can use the information
-        below.
-      </p>
+                <p>
+                    If you would like to contact me regarding my coursework,
+                    projects, or web development work, you can use the information
+                    below.
+                </p>
 
-      <p>
-        <strong>Name:</strong> Martin Medina
-      </p>
+                <p>
+                    <strong>Name:</strong> Martin Medina
+                </p>
 
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:mmedina17@dmacc.edu">
-          mmedina17@dmacc.edu
-        </a>
-      </p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:mmedina17@dmacc.edu">
+                        mmedina17@dmacc.edu
+                    </a>
+                </p>
 
-      <p>
-        <strong>GitHub:</strong>
-        <a href="https://github.com/Mmedinav99" target="_blank" rel="noopener noreferrer">
-          Visit My GitHub
-        </a>
-      </p>
+                <p>
+                    <strong>GitHub:</strong>
+                    <a
+                        href="https://github.com/Mmedinav99"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit My GitHub
+                    </a>
+                </p>
 
-      <h2>Send a Message</h2>
+                <h2>Send a Message</h2>
 
-      <form action="#" method="post">
+                <!-- Bootstrap Contact Form -->
+                <form action="#" method="post" class="needs-validation" novalidate>
 
-        <p>
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required>
-        </p>
+                    <div class="mb-3">
 
-        <p>
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required>
-        </p>
+                        <label for="name" class="form-label">
+                            Name
+                        </label>
 
-        <p>
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </p>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
 
-        <p>
-          <button type="submit" class="homework-link">
-            Send Message
-          </button>
-        </p>
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
 
-      </form>
+                    </div>
 
-    </section>
+                    <div class="mb-3">
 
-  </main>
+                        <label for="email" class="form-label">
+                            Email address
+                        </label>
 
-  <footer>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="name@example.com"
+                            required
+                        >
 
-    <p>&copy; 2026 Martin Medina | CIS-515 | All Rights Reserved</p>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
 
-  </footer>
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="message" class="form-label">
+                            Message
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Enter your message"
+                            required
+                        ></textarea>
+
+                        <div class="invalid-feedback">
+                            Please enter a message.
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary bootstrap-button"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer id="site-footer">
+            <p>&copy; 2026 Martin Medina | CIS-515 | All Rights Reserved</p>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Form Validation -->
+    <script>
+        (() => {
+            'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+
+                }, false);
+            });
+
+        })();
+    </script>
 
 </body>
 
