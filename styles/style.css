@@ -1,3 +1,4 @@
+
 /* Base Reset */
 * {
     margin: 0;
@@ -200,7 +201,55 @@ header p {
     font-weight: bold;
     padding: 12px 28px;
     border-radius: 6px;
+    border: 2px solid #93d4f7;
+    background: linear-gradient(to bottom, #3a5f66, #1e333a);
+    color: #e0f7fa;
     box-shadow: 0 4px 12px rgba(70, 130, 180, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.bootstrap-button:hover {
+    background: linear-gradient(to bottom, #5d9ea0, #27434a);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(147, 212, 247, 0.5);
+}
+
+.bootstrap-button:focus-visible {
+    outline: 3px solid #b0e0ff;
+    outline-offset: 4px;
+}
+
+/* JavaScript Interactive Message */
+.interaction-message {
+    margin: 25px auto 0;
+    padding: 20px;
+    max-width: 700px;
+    background: rgba(15, 22, 26, 0.95);
+    color: #b0e0ff;
+    border: 2px solid #607d8b;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(147, 212, 247, 0.2);
+    font-size: 1rem;
+    line-height: 1.8;
+    animation: messageFadeIn 0.4s ease;
+}
+
+.interaction-message[hidden] {
+    display: none;
+}
+
+@keyframes messageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Bootstrap Form */
@@ -316,5 +365,28 @@ header p {
 
     #site-footer {
         font-size: 0.8rem;
+    }
+
+    .interaction-message {
+        padding: 15px;
+        font-size: 0.9rem;
+        overflow-wrap: break-word;
+    }
+
+    .bootstrap-button {
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    .interaction-message {
+        animation: none;
+    }
+
+    .bootstrap-button {
+        transition: none;
     }
 }
