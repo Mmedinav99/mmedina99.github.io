@@ -1,105 +1,147 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Job Application Tracker Project - Martin Medina</title>
+    <title>Project Details - Martin Medina</title>
+    <meta name="description" content="Learn about the goals and planned features of the Job Application Tracker.">
 
-    <!-- Main stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+          rel="stylesheet">
+
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
 
-    <!-- Banner -->
-    <header class="banner">
+<div class="banner">
+    <div class="banner-image">
+        <img src="images/banner.jpg" alt="Job Application Tracker project banner">
+    </div>
+</div>
 
-        <div class="banner-image">
-            <img src="images/banner.jpg" alt="Job Application Tracker Banner">
+<div class="container-fluid container-md px-3 px-md-4">
+
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar rounded-bottom mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Martin Medina</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                           href="project.html">Page 1: Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mobile.html">Page 2: Mobile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Job Tracker Project</a></li>
-                <li><a href="mobile.html">From Web to Mobile</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <!-- Main Content -->
-    <main>
+    <main class="content-panel">
 
         <h1>Job Application Tracker Project</h1>
-
-        <h2>Martin Medina</h2>
+        <h2 class="text-center mb-4">Martin Medina</h2>
 
         <section>
             <h2>Project Overview</h2>
 
             <p class="bio">
                 The Job Application Tracker is a full-stack web development
-                project designed to help job seekers organize their job
-                applications in one location.
+                project designed to help job seekers organize their applications
+                in one location instead of relying on separate websites,
+                emails, documents, and notes.
             </p>
 
             <p class="bio">
-                The application will allow users to keep track of companies,
-                positions, application statuses, interviews, salary information,
-                job posting links, requirements, and notes.
+                The project is based on the challenge of remembering application
+                details, deadlines, interviews, and follow-up dates during a job
+                search. Its goal is to provide a more organized way to review
+                job opportunities and follow their progress.
             </p>
         </section>
 
         <section>
-            <h2>Project Features</h2>
+            <h2>Planned Project Features</h2>
 
             <ul>
-                <li>Track job applications</li>
-                <li>Record company and position information</li>
-                <li>Track application status</li>
-                <li>Record interview information</li>
-                <li>Store salary information</li>
-                <li>Save job posting links</li>
-                <li>Add notes and requirements</li>
+                <li>Record company names and job positions.</li>
+                <li>Track application statuses.</li>
+                <li>Store interview dates and related information.</li>
+                <li>Record salary details and job requirements.</li>
+                <li>Save job posting links for future reference.</li>
+                <li>Add personal notes to individual applications.</li>
+                <li>Organize follow-up dates and important deadlines.</li>
             </ul>
+
+            <p class="bio">
+                These are planned application capabilities. Their availability
+                will depend on the features implemented in the final application.
+            </p>
         </section>
 
         <section>
-            <h2>Related Websites</h2>
+            <h2>Related Job Search Websites</h2>
+
+            <p class="bio">
+                These websites provide examples of online job search services
+                that job seekers may use alongside an application tracker.
+            </p>
 
             <ul>
                 <li>
-                    <a href="https://www.indeed.com/" target="_blank" rel="noopener noreferrer">
-                        Indeed
-                    </a>
+                    <a href="https://www.indeed.com/"
+                       target="_blank" rel="noopener noreferrer">Indeed</a>
                 </li>
-
                 <li>
-                    <a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener noreferrer">
-                        LinkedIn Jobs
-                    </a>
+                    <a href="https://www.linkedin.com/jobs/"
+                       target="_blank" rel="noopener noreferrer">LinkedIn Jobs</a>
                 </li>
-
                 <li>
-                    <a href="https://www.glassdoor.com/Job/" target="_blank" rel="noopener noreferrer">
-                        Glassdoor Jobs
-                    </a>
+                    <a href="https://www.glassdoor.com/Job/"
+                       target="_blank" rel="noopener noreferrer">Glassdoor Jobs</a>
                 </li>
             </ul>
         </section>
 
+        <div class="text-center my-4">
+            <a href="mobile.html" class="btn btn-primary project-button">
+                Explore the Mobile Honors Project
+            </a>
+        </div>
+
     </main>
 
-    <!-- Footer -->
     <footer id="site-footer">
-        <p>&copy; 2026 Martin Medina</p>
+        <p>&copy; 2026 Martin Medina | CIS-515 | All Rights Reserved</p>
     </footer>
 
-    <script src="js/script.js"></script>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

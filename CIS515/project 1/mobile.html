@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,52 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>From Web to Mobile - Martin Medina</title>
+    <meta name="description" content="Explore the mobile-first honors extension of the Job Application Tracker.">
 
-    <!-- Main stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+          rel="stylesheet">
+
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
 
-    <!-- Banner -->
-    <header class="banner">
+<div class="banner">
+    <div class="banner-image">
+        <img src="images/banner.jpg" alt="Job Application Tracker project banner">
+    </div>
+</div>
 
-        <div class="banner-image">
-            <img src="images/banner.jpg" alt="Job Application Tracker Banner">
+<div class="container-fluid container-md px-3 px-md-4">
+
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar rounded-bottom mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Martin Medina</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Page 1: Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                           href="mobile.html">Page 2: Mobile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Job Tracker Project</a></li>
-                <li><a href="mobile.html">From Web to Mobile</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <!-- Main Content -->
-    <main>
+    <main class="content-panel">
 
         <h1>From Web to Mobile</h1>
-
-        <h2>Martin Medina</h2>
+        <h2 class="text-center mb-4">Martin Medina</h2>
 
         <section>
             <h2>Honors Project</h2>
 
             <p class="bio">
-                From Web to Mobile: Enhancing a Full-Stack Job Application
-                Tracker for Smartphone Users is the Honors extension of the
+                "From Web to Mobile: Enhancing a Full-Stack Job Application
+                Tracker for Smartphone Users" is the honors extension of the
                 Job Application Tracker project.
             </p>
 
             <p class="bio">
-                The project will investigate how a mobile-first redesign can
-                improve the usability and efficiency of a full-stack job
-                application tracker for smartphone users.
+                This project explores how a mobile-first redesign can improve
+                the usability and efficiency of a job application tracker.
+                Since job seekers may research positions, submit applications,
+                and check updates on their phones, the interface should remain
+                clear and convenient on smaller screens.
             </p>
         </section>
 
@@ -58,13 +87,12 @@
             <h2>Mobile Development Focus</h2>
 
             <ul>
-                <li>Mobile-first design</li>
-                <li>Responsive web development</li>
-                <li>Mobile-friendly navigation</li>
-                <li>Touch-friendly controls</li>
-                <li>Mobile-friendly forms</li>
-                <li>Responsive layouts</li>
-                <li>Usability testing</li>
+                <li>Mobile-first design and responsive layouts.</li>
+                <li>Navigation that works on small screens.</li>
+                <li>Touch-friendly buttons and controls.</li>
+                <li>Forms that are easy to complete on smartphones.</li>
+                <li>Readable application details and status information.</li>
+                <li>Usability testing and improvements based on feedback.</li>
             </ul>
         </section>
 
@@ -72,22 +100,48 @@
             <h2>Planned Mobile Features</h2>
 
             <ul>
-                <li>Quick Add Application</li>
-                <li>Application Status Timeline</li>
-                <li>Interview and Follow-Up Reminders</li>
-                <li>Priority Applications</li>
-                <li>Improved Mobile Search and Filtering</li>
+                <li><strong>Quick Add Application:</strong> A simplified way to record a job opportunity.</li>
+                <li><strong>Application Status Timeline:</strong> A clear view of application progress.</li>
+                <li><strong>Interview and Follow-Up Reminders:</strong> Easier access to important dates.</li>
+                <li><strong>Priority Applications:</strong> A way to highlight opportunities needing attention.</li>
+                <li><strong>Mobile Search and Filtering:</strong> A simpler way to locate saved applications.</li>
             </ul>
+
+            <p class="bio">
+                These features are proposed enhancements and will be evaluated
+                as the honors project develops.
+            </p>
         </section>
+
+        <section>
+            <h2>Testing and Evaluation</h2>
+
+            <p class="bio">
+                The mobile design will be reviewed at different screen sizes
+                and in supported browsers. Volunteer users may be asked to
+                complete common tasks, such as adding an application, updating
+                its status, locating an important opportunity, and navigating
+                the interface. Their feedback will help identify usability
+                issues and guide further improvements.
+            </p>
+        </section>
+
+        <div class="text-center my-4">
+            <a href="contact.html" class="btn btn-primary project-button">
+                Share Project Feedback
+            </a>
+        </div>
 
     </main>
 
-    <!-- Footer -->
     <footer id="site-footer">
-        <p>&copy; 2026 Martin Medina</p>
+        <p>&copy; 2026 Martin Medina | CIS-515 | All Rights Reserved</p>
     </footer>
 
-    <script src="js/script.js"></script>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

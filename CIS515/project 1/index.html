@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,152 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Martin Medina - Job Application Tracker</title>
+    <meta name="description" content="Explore Martin Medina's full-stack Job Application Tracker project and its mobile-first honors extension.">
 
-    <!-- Main stylesheet -->
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
 
-    <!-- Banner -->
-    <header class="banner">
+<div class="banner">
+    <div class="banner-image">
+        <img src="images/banner.jpg"
+             alt="Job Application Tracker project banner">
+    </div>
+</div>
 
-        <!-- Banner Image -->
-        <div class="banner-image">
-            <img src="images/banner.jpg" alt="Job Application Tracker Banner">
+<div class="container-fluid container-md px-3 px-md-4">
+
+    <!-- Bootstrap Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar rounded-bottom mb-4">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">Martin Medina</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                           href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Page 1: Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mobile.html">Page 2: Mobile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Job Tracker Project</a></li>
-                <li><a href="mobile.html">From Web to Mobile</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <main class="content-panel">
 
-    </header>
+        <h1>Don't Get Lost Searching for a Job—Job Application Tracker</h1>
 
-    <!-- Main Content -->
-    <main>
+        <h2 class="text-center mb-4">Martin Medina</h2>
 
-        <h1>Don’t Get Lost Searching for a Job—Job Application Tracker</h1>
-
-        <h2>Martin Medina</h2>
-
-        <!-- Project Introduction -->
         <section class="project-introduction">
-
-            <h2>Project</h2>
+            <h2>Project Overview</h2>
 
             <p class="bio">
-                Looking for a job can mean keeping track of a lot of companies,
-                positions, job postings, applications, interviews, salary details,
-                links to job postings, requirements, and dates to follow up. When
-                all this information is spread out across job websites, emails,
-                documents, and notes, it can be hard to remember where an
-                application was sent or what step of the hiring process it is in.
-                The Job Application Tracker was made to give job seekers one place
-                to manage all this information.
+                Looking for a job can mean keeping track of many companies,
+                positions, job postings, applications, interviews, salary
+                details, requirements, and follow-up dates. When this
+                information is spread across job websites, emails, documents,
+                and notes, it can be difficult to remember where an application
+                was submitted or what stage of the hiring process it has reached.
             </p>
 
             <p class="bio">
-                The goal of this full-stack web development project is to build an
-                application that helps users organize their job search and keep
-                track of their applications from start to finish. Users will be
-                able to write down details about each job opportunity, such as the
-                company, the position, the application status, interviews, salary
-                details, job posting links, requirements, and personal notes. By
-                having all this information in one place, the application can help
-                users have an understanding of their job search instead of
-                depending on many websites or separate documents.
+                The Job Application Tracker is a full-stack web development
+                project designed to help job seekers organize this information
+                in one place. The planned application will allow users to record
+                company names, positions, application statuses, interview
+                details, salary information, job posting links, requirements,
+                and personal notes.
             </p>
 
             <p class="bio">
-                The project is also being expanded through an honors part called
-                From Web to Mobile: Enhancing a Full-Stack Job Application Tracker
-                for Smartphone Users. This part looks at how the current
-                application can be redesigned to offer an experience on
-                smartphones. Since job seekers might look for jobs and apply using
-                their phones, the application needs to be easy to use and navigate
-                on screens while still keeping its main features.
+                The project also includes an honors extension titled
+                "From Web to Mobile: Enhancing a Full-Stack Job Application
+                Tracker for Smartphone Users." This extension explores how
+                mobile-first design and responsive development can make the
+                tracker easier to use on smartphones.
             </p>
 
             <p class="bio">
-                The honors part will focus on first design, responsive development,
-                mobile usability, and features that work well on mobile devices.
-                The project will have first sketches and redesigned screens that
-                work well on phones. The design will focus on navigation,
-                touch-friendly buttons, clear information, and forms that are
-                simple to use on mobile devices. At least one major feature that
-                works only on mobile will also be added. Ideas for these features
-                include a Quick Add Application form, an Application Status
-                Timeline, reminders for interviews and follow-ups, priority
-                applications, or better search and filtering on mobile.
+                The honors work will focus on mobile-friendly navigation,
+                readable layouts, touch-friendly controls, simplified forms,
+                and useful features for people managing their job searches
+                from their phones. Responsive testing and user feedback will
+                help identify areas that need improvement.
             </p>
-
-            <p class="bio">
-                Testing will be done on screen sizes and browsers to find issues
-                with the design that works on mobile. A small group of people who
-                volunteer will test the version by doing real tasks like adding an
-                application, changing the status of an application, finding a
-                priority application, and moving around the mobile home screen.
-                Their comments will help spot problems with how easy it is to use
-                and make changes.
-            </p>
-
-            <p class="bio">
-                The main goal of this project is to create a full-stack job
-                application tracker while looking into how mobile-first design can
-                improve the experience for people using smartphones. The honors
-                part gives the project a chance to grow beyond its basic features
-                through research, building for mobile, testing, evaluating how
-                easy it is to use, and listening to what users have to say.
-            </p>
-
         </section>
 
-        <!-- Main Image -->
         <section class="project-image">
-
-            <img
-                src="images/job-tracker.jpg"
-                alt="Job Application Tracker Project Image"
-            >
-
+            <h2>Project Image</h2>
+            <img src="images/job-tracker.jpg"
+                 alt="Illustration representing the Job Application Tracker"
+                 class="img-fluid">
         </section>
 
-        <!-- Project Links -->
         <section class="project-links">
+            <h2>Explore the Project</h2>
 
-            <h2>Project Sections</h2>
+            <div class="d-grid gap-3 d-md-flex flex-wrap">
+                <a class="btn btn-primary project-button"
+                   href="project.html">Page 1: Project Details</a>
 
-            <ul>
-                <li>
-                    <a href="project.html">Job Application Tracker Project</a>
-                </li>
+                <a class="btn btn-primary project-button"
+                   href="mobile.html">Page 2: Mobile Honors Project</a>
 
-                <li>
-                    <a href="mobile.html">From Web to Mobile</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-
+                <a class="btn btn-outline-info project-button"
+                   href="contact.html">Contact Me</a>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer id="site-footer">
-        <p>&copy; 2026 Martin Medina</p>
+        <p>&copy; 2026 Martin Medina | CIS-515 | All Rights Reserved</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+</div>
 
+<!-- Bootstrap JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
 </body>
 </html>

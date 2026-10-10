@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,92 +7,101 @@
 
     <title>Form Submission - Martin Medina</title>
 
-    <!-- Main stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+          rel="stylesheet">
+
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
 
-    <!-- Banner -->
-    <header class="banner">
+<div class="banner">
+    <div class="banner-image">
+        <img src="images/banner.jpg" alt="Job Application Tracker project banner">
+    </div>
+</div>
 
-        <div class="banner-image">
-            <img src="images/banner.jpg" alt="Job Application Tracker Banner">
+<div class="container-fluid container-md px-3 px-md-4">
+
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar rounded-bottom mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Martin Medina</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Page 1: Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mobile.html">Page 2: Mobile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Job Tracker Project</a></li>
-                <li><a href="mobile.html">From Web to Mobile</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <!-- Main Content -->
-    <main>
+    <main class="content-panel">
 
         <h1>Form Submission</h1>
 
         <section>
-
             <h2>Thank You!</h2>
 
-            <p>Your information has been submitted successfully.</p>
+            <p class="bio">
+                Your form has been processed by this demonstration page.
+                The information below was passed through the page URL.
+                No email is sent and no information is stored on a server.
+            </p>
 
             <h3>Submitted Information</h3>
 
-            <p>
-                <strong>Name:</strong>
-                <span id="name"></span>
-            </p>
+            <dl class="row">
+                <dt class="col-sm-3">Name</dt>
+                <dd class="col-sm-9" id="submittedName"></dd>
 
-            <p>
-                <strong>Email:</strong>
-                <span id="email"></span>
-            </p>
+                <dt class="col-sm-3">Email</dt>
+                <dd class="col-sm-9" id="submittedEmail"></dd>
 
-            <p>
-                <strong>Subject:</strong>
-                <span id="subject"></span>
-            </p>
+                <dt class="col-sm-3">Subject</dt>
+                <dd class="col-sm-9" id="submittedSubject"></dd>
 
-            <p>
-                <strong>Message:</strong>
-                <span id="message"></span>
-            </p>
+                <dt class="col-sm-3">Message</dt>
+                <dd class="col-sm-9" id="submittedMessage"></dd>
+            </dl>
 
-            <p>
-                <a href="contact.html">Return to Contact Page</a>
-            </p>
-
+            <a href="contact.html" class="btn btn-primary project-button">
+                Return to Contact Page
+            </a>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer id="site-footer">
-        <p>&copy; 2026 Martin Medina</p>
+        <p>&copy; 2026 Martin Medina | CIS-515 | All Rights Reserved</p>
     </footer>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
+</div>
 
-        document.getElementById("name").textContent =
-            params.get("name") || "";
-
-        document.getElementById("email").textContent =
-            params.get("email") || "";
-
-        document.getElementById("subject").textContent =
-            params.get("subject") || "";
-
-        document.getElementById("message").textContent =
-            params.get("message") || "";
-    </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
