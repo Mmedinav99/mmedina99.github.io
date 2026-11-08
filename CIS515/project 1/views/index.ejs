@@ -1,78 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Martin Medina - Job Application Tracker</title>
-    <meta name="description" content="Explore Martin Medina's full-stack Job Application Tracker project and its mobile-first honors extension.">
 
-    <!-- Bootstrap CSS CDN -->
+    <meta name="description"
+          content="Explore Martin Medina's full-stack Job Application Tracker project and its mobile-first honors extension.">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
           rel="stylesheet"
           crossorigin="anonymous">
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
           rel="stylesheet">
 
-    <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
+
 <body>
 
 <div class="banner">
+
     <div class="banner-image">
-        <img src="images/banner.jpg"
+
+        <img src="/images/banner.jpg"
              alt="Job Application Tracker project banner">
+
     </div>
+
 </div>
 
 <div class="container-fluid container-md px-3 px-md-4">
 
-    <!-- Bootstrap Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark site-navbar rounded-bottom mb-4">
+
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="index.html">Martin Medina</a>
+            <a class="navbar-brand" href="/">
+                Martin Medina
+            </a>
 
-            <button class="navbar-toggler" type="button"
+            <button class="navbar-toggler"
+                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#mainNavigation"
                     aria-controls="mainNavigation"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
-            <div class="collapse navbar-collapse" id="mainNavigation">
+            <div class="collapse navbar-collapse"
+                 id="mainNavigation">
+
                 <ul class="navbar-nav ms-auto">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                           href="index.html">Home</a>
+
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="/">
+                            Home
+                        </a>
+
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="project.html">Page 1: Project</a>
+
+                        <a class="nav-link"
+                           href="/project">
+                            Page 1: Project
+                        </a>
+
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="mobile.html">Page 2: Mobile</a>
+
+                        <a class="nav-link"
+                           href="/mobile">
+                            Page 2: Mobile
+                        </a>
+
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+
+                        <a class="nav-link"
+                           href="/contact">
+                            Contact
+                        </a>
+
                     </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </nav>
 
     <main class="content-panel">
 
-        <h1>Don't Get Lost Searching for a Job—Job Application Tracker</h1>
+        <h1>
+            Don't Get Lost Searching for a Job—Job Application Tracker
+        </h1>
 
-        <h2 class="text-center mb-4">Martin Medina</h2>
+        <h2 class="text-center mb-4">
+            Martin Medina
+        </h2>
 
         <section class="project-introduction">
+
             <h2>Project Overview</h2>
 
             <p class="bio">
@@ -108,42 +152,60 @@
                 from their phones. Responsive testing and user feedback will
                 help identify areas that need improvement.
             </p>
+
         </section>
 
         <section class="project-image">
+
             <h2>Project Image</h2>
-            <img src="images/job-tracker.jpg"
+
+            <img src="/images/job-tracker.jpg"
                  alt="Illustration representing the Job Application Tracker"
                  class="img-fluid">
+
         </section>
 
         <section class="project-links">
+
             <h2>Explore the Project</h2>
 
             <div class="d-grid gap-3 d-md-flex flex-wrap">
-                <a class="btn btn-primary project-button"
-                   href="project.html">Page 1: Project Details</a>
 
                 <a class="btn btn-primary project-button"
-                   href="mobile.html">Page 2: Mobile Honors Project</a>
+                   href="/project">
+                    Page 1: Project Details
+                </a>
+
+                <a class="btn btn-primary project-button"
+                   href="/mobile">
+                    Page 2: Mobile Honors Project
+                </a>
 
                 <a class="btn btn-outline-info project-button"
-                   href="contact.html">Contact Me</a>
+                   href="/contact">
+                    Contact Me
+                </a>
+
             </div>
+
         </section>
 
     </main>
 
     <footer id="site-footer">
-        <p>&copy; 2026 Martin Medina | CIS-515 | All Rights Reserved</p>
+
+        <p>
+            &copy; 2026 Martin Medina | CIS-515 | All Rights Reserved
+        </p>
+
     </footer>
 
 </div>
 
-<!-- Bootstrap JavaScript Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
-<script src="js/script.js"></script>
+<script src="/js/script.js"></script>
+
 </body>
 </html>
